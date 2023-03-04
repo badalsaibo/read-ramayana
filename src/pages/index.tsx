@@ -1,3 +1,4 @@
+import Stack from "@components/Stack";
 import Head from "next/head";
 
 export default function Home() {
@@ -15,12 +16,14 @@ export default function Home() {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
       </Head>
-      <p className="font-sans">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, magnam ipsa voluptatum harum delectus
-        repellendus, voluptas aliquid, nihil quasi tempore quo laboriosam! Animi expedita blanditiis laudantium, maiores
-        corporis beatae ratione.
-      </p>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Stack direction="column" spacing={10}>
+        <p className="font-sans">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, magnam ipsa voluptatum harum delectus
+          repellendus, voluptas aliquid, nihil quasi tempore quo laboriosam! Animi expedita blanditiis laudantium,
+          maiores corporis beatae ratione.
+        </p>
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      </Stack>
     </>
   );
 }

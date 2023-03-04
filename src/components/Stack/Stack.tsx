@@ -11,7 +11,7 @@ const Stack = ({ children, spacing = 2, direction = "row" }: TProps) => {
     <div
       className={clsx("flex", `gap-[${spacing}rem]`, {
         "flex-row": direction === "row",
-        "flex-column": direction === "column",
+        "flex-col": direction === "column",
       })}
     >
       {children}
