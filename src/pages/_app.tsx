@@ -8,7 +8,7 @@ const HindSiliguri = Hind_Siliguri({ subsets: ["latin"], weight: ["300"], variab
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={HindSiliguri.variable}>
+    <main className={`${HindSiliguri.variable}`}>
       <Component {...pageProps} />
     </main>
   );

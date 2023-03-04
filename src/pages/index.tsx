@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
 
 export default function Home() {
   return (
@@ -16,11 +15,12 @@ export default function Home() {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
       </Head>
-      <p className="sans">
+      <p className="font-sans">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, magnam ipsa voluptatum harum delectus
         repellendus, voluptas aliquid, nihil quasi tempore quo laboriosam! Animi expedita blanditiis laudantium, maiores
         corporis beatae ratione.
       </p>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </>
   );
 }
