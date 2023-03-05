@@ -1,3 +1,4 @@
+import { Typography } from '@mui/joy';
 import Head from 'next/head';
 
 export default function Home() {
@@ -15,6 +16,11 @@ export default function Home() {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
       </Head>
+      <Typography level="h1">Heading1</Typography>
+      <Typography level="body1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ad, molestias tenetur quam ipsa nostrum hic autem
+        quaerat harum at aspernatur, repellendus illo iusto soluta tempora. Fugit, numquam! Illum, dolore.
+      </Typography>
     </>
   );
 }
