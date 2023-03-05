@@ -1,5 +1,5 @@
-import Stack from "@components/Stack";
-import Head from "next/head";
+import Stack from '@components/Stack';
+import Head from 'next/head';
 
 export default function Home() {
   return (

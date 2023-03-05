@@ -1,17 +1,17 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
 type TProps = {
   children: React.ReactNode;
   spacing?: number;
-  direction?: "row" | "column";
+  direction?: 'row' | 'column';
 };
 
-const Stack = ({ children, spacing = 2, direction = "row" }: TProps) => {
+const Stack = ({ children, spacing = 2, direction = 'row' }: TProps) => {
   return (
     <div
-      className={clsx("flex", `gap-[${spacing}rem]`, {
-        "flex-row": direction === "row",
-        "flex-col": direction === "column",
+      className={clsx('flex', {
+        'flex-row': direction === 'row',
+        'flex-col': direction === 'column',
       })}
     >
       {children}

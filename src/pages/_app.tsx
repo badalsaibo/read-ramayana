@@ -1,10 +1,10 @@
-import type { AppProps } from "next/app";
+import type { AppProps } from 'next/app';
 
-import { Hind_Siliguri } from "@next/font/google";
+import { Hind_Siliguri } from '@next/font/google';
 
-import "../styles/globals.css";
+import '../styles/globals.css';
 
-const HindSiliguri = Hind_Siliguri({ subsets: ["latin"], weight: ["300"], variable: "--font-body" });
+const HindSiliguri = Hind_Siliguri({ subsets: ['latin'], weight: ['300'], variable: '--font-body' });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
