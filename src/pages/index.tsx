@@ -1,4 +1,5 @@
 import { Typography } from '@mui/joy';
+import Kanda from 'components/Kanda';
 import Head from 'next/head';
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ad, molestias tenetur quam ipsa nostrum hic autem
         quaerat harum at aspernatur, repellendus illo iusto soluta tempora. Fugit, numquam! Illum, dolore.
       </Typography>
+      <Kanda>Home</Kanda>
     </>
   );
 }

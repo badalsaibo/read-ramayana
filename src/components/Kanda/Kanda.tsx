@@ -5,7 +5,7 @@ type TKandaProps = {
 };
 
 const Kanda = ({ children }: TKandaProps) => {
-  return <Button></Button>;
+  return <Button variant="soft">{children}</Button>;
 };
 
 export default Kanda;
