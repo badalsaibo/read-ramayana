@@ -4,15 +4,13 @@ import { CssVarsProvider, extendTheme } from '@mui/joy/styles';
 import themeConfig from 'config/theme';
 import GlobalStyles from '@mui/joy/GlobalStyles';
 import CssBaseline from '@mui/joy/CssBaseline';
+import Layout from 'components/Layout';
 
 const globalStyles = (
   <GlobalStyles
     styles={{
       'html, body, div#__next': {
         height: '100%',
-      },
-      'div#__next > div': {
-        minHeight: '100%',
       },
     }}
   />
@@ -23,7 +21,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <CssVarsProvider theme={extendTheme(themeConfig)}>
       <CssBaseline />
       {globalStyles}
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </CssVarsProvider>
   );
 }
