@@ -1,6 +1,16 @@
-import { Typography } from '@mui/joy';
-import Kanda from 'components/Kanda';
+import Typography from '@mui/joy/Typography';
+import Grid from '@mui/joy/Grid';
+import PadButton from 'components/PadButton';
 import Head from 'next/head';
+
+const KANDAS = [
+  { kanda: 'bala' },
+  { kanda: 'ayodhya' },
+  { kanda: 'aranya' },
+  { kanda: 'kishkindha' },
+  { kanda: 'sundara' },
+  { kanda: 'Yuddha' },
+];
 
 export default function Home() {
   return (
@@ -22,7 +32,13 @@ export default function Home() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ad, molestias tenetur quam ipsa nostrum hic autem
         quaerat harum at aspernatur, repellendus illo iusto soluta tempora. Fugit, numquam! Illum, dolore.
       </Typography>
-      <Kanda>Home</Kanda>
+      <Grid container spacing={2}>
+        {KANDAS.map(({ kanda }) => (
+          <Grid key={kanda} xs={6}>
+            <PadButton>{kanda}</PadButton>
+          </Grid>
+        ))}
+      </Grid>
     </>
   );
 }
