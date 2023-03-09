@@ -1,7 +1,7 @@
-import Typography from '@mui/joy/Typography';
-import Grid from '@mui/joy/Grid';
-import PadButton from 'components/PadButton';
 import Head from 'next/head';
+import Grid from '@mui/joy/Grid';
+import Typography from '@mui/joy/Typography';
+import PaddedButton from 'components/PaddedButton';
 
 const KANDAS = [
   { kanda: 'bala' },
@@ -35,7 +35,7 @@ export default function Home() {
       <Grid container spacing={2}>
         {KANDAS.map(({ kanda }) => (
           <Grid key={kanda} xs={6}>
-            <PadButton>{kanda}</PadButton>
+            <PaddedButton>{kanda}</PaddedButton>
           </Grid>
         ))}
       </Grid>

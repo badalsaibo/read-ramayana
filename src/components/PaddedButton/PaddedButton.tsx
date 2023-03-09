@@ -10,7 +10,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
   padding: theme.spacing(5),
 }));
 
-const PadButton = ({ children }: TPadButtonProps) => {
+const PaddedButton = ({ children }: TPadButtonProps) => {
   return (
     <StyledButton variant="soft">
       <Typography>{children}</Typography>
@@ -18,4 +18,4 @@ const PadButton = ({ children }: TPadButtonProps) => {
   );
 };
 
-export default PadButton;
+export default PaddedButton;
