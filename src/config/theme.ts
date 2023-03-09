@@ -6,6 +6,11 @@ const themeConfig: CssVarsThemeOptions = {
     body: `${body.style.fontFamily}, var(--joy-fontFamily-fallback)`,
     display: `${display.style.fontFamily}, var(--joy-fontFamily-fallback)`,
   },
+  typography: {
+    h1: {
+      fontWeight: 'var(--joy-fontWeight-xl)'
+    }
+  }
 };
 
 export default themeConfig;

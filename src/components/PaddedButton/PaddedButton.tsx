@@ -4,16 +4,29 @@ type TPadButtonProps = {
   children: React.ReactNode;
 };
 
+type TTypography = {
+  component: React.ElementType;
+};
+
 const StyledButton = styled(Button)(({ theme }) => ({
-  textTransform: 'capitalize',
   width: '100%',
-  padding: theme.spacing(5),
+  textTransform: 'capitalize',
+  justifyContent: 'flex-start',
+  padding: `${theme.spacing(4)} ${theme.spacing(2)}`,
+}));
+
+const StyledType = styled(Typography)<TTypography>(({ theme }) => ({
+  fontSize: '1.5rem',
+  color: theme.vars.palette.primary[500],
+  fontWeight: '500',
 }));
 
 const PaddedButton = ({ children }: TPadButtonProps) => {
   return (
     <StyledButton variant="soft">
-      <Typography>{children}</Typography>
+      <StyledType level="h1" component="p">
+        {children}
+      </StyledType>
     </StyledButton>
   );
 };
