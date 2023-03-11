@@ -1,3 +1,4 @@
 export type TSvgProps = {
-    size?: number
-}
+  size?: number;
+  color?: string;
+};
