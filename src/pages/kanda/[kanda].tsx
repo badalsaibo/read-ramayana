@@ -1,6 +1,12 @@
 import { Typography } from '@mui/joy';
 import { GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
+import { TKandas } from './types';
+import { getAllChaptersOfKanda } from './utils/ssg';
+
+interface Params extends ParsedUrlQuery {
+  kanda: TKandas;
+}
 
 const Kanda = () => {
   return <Typography>Hello, Kanda</Typography>;
@@ -14,14 +20,6 @@ export const getStaticPaths = async () => {
     fallback: false,
   };
 };
-
-const getAllChaptersOfKanda = (kanda: string) => {
-  // node library to fetch kanda
-};
-
-interface Params extends ParsedUrlQuery {
-  kanda: string;
-}
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { kanda } = context.params as Params;
