@@ -16,9 +16,9 @@ const StyledButton = styled(Button)(({ theme }) => ({
 }));
 
 const StyledType = styled(Typography)<TTypography>(({ theme }) => ({
-  fontSize: '1.5rem',
-  color: theme.vars.palette.primary[500],
-  fontWeight: '500',
+  fontSize: '1.25rem',
+  color: theme.vars.palette.primary[600],
+  fontWeight: '700',
 }));
 
 const PaddedButton = ({ children }: TPadButtonProps) => {
