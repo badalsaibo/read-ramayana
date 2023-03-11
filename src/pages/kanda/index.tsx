@@ -1,7 +1,11 @@
-import { Typography } from '@mui/joy';
+import { Breadcrumbs, styled, Typography } from '@mui/joy';
 import Grid from '@mui/joy/Grid';
 import { Box, Divider, Stack } from '@mui/joy';
 import PaddedButton from 'components/PaddedButton';
+import Link from 'next/link';
+import JoyLink from '@mui/joy/Link';
+
+import ChevronRightCircle from 'icons/ChevronRightCircle';
 
 const KANDAS = [
   { kanda: 'bala' },
@@ -9,12 +13,24 @@ const KANDAS = [
   { kanda: 'aranya' },
   { kanda: 'kishkindha' },
   { kanda: 'sundara' },
-  { kanda: 'Yuddha' },
+  { kanda: 'yuddha' },
+];
+
+const BREADCRUMBS = [
+  { text: 'home', url: '/' },
+  { text: 'kandas', url: '/kanda' },
 ];
 
 const Kanda = () => {
   return (
     <Stack spacing={1}>
+      <StyledBreadcrumbs separator={<ChevronRightCircle size={14} />}>
+        {BREADCRUMBS.map(({ text, url }) => (
+          <JoyLink component={Link} key={text} href={url} underline="hover" color="neutral">
+            {text}
+          </JoyLink>
+        ))}
+      </StyledBreadcrumbs>
       <Typography level="h1">Kandas</Typography>
       <Divider sx={{ mb: 1 }} />
       <Box>
@@ -31,3 +47,7 @@ const Kanda = () => {
 };
 
 export default Kanda;
+
+const StyledBreadcrumbs = styled(Breadcrumbs)(() => ({
+  padding: 0,
+}));
