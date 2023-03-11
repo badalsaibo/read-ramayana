@@ -1,32 +1,40 @@
 import { Button, styled, Typography } from '@mui/joy';
+import Link from 'next/link';
+import React from 'react';
 
 type TPadButtonProps = {
   children: React.ReactNode;
+  href: string;
 };
 
 type TTypography = {
   component: React.ElementType;
 };
 
-const StyledButton = styled(Button)(({ theme }) => ({
+type TStyledButtonProps = {
+  component: React.ElementType;
+  href: string;
+};
+
+const StyledButton = styled(Button)<TStyledButtonProps>(({ theme }) => ({
   width: '100%',
   textTransform: 'capitalize',
   justifyContent: 'flex-start',
   padding: `${theme.spacing(4)} ${theme.spacing(2)}`,
 }));
 
-const StyledType = styled(Typography)<TTypography>(({ theme }) => ({
+const Text = styled(Typography)<TTypography>(({ theme }) => ({
   fontSize: '1.25rem',
   color: theme.vars.palette.primary[600],
   fontWeight: '700',
 }));
 
-const PaddedButton = ({ children }: TPadButtonProps) => {
+const PaddedButton = ({ children, href }: TPadButtonProps) => {
   return (
-    <StyledButton variant="soft">
-      <StyledType level="h1" component="p">
+    <StyledButton variant="soft" component={Link} href={href}>
+      <Text level="h1" component="p">
         {children}
-      </StyledType>
+      </Text>
     </StyledButton>
   );
 };

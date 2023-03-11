@@ -8,12 +8,12 @@ import JoyLink from '@mui/joy/Link';
 import ChevronRightCircle from 'icons/ChevronRightCircle';
 
 const KANDAS = [
-  { kanda: 'bala' },
-  { kanda: 'ayodhya' },
-  { kanda: 'aranya' },
-  { kanda: 'kishkindha' },
-  { kanda: 'sundara' },
-  { kanda: 'yuddha' },
+  { kanda: 'bala', url: '/bala' },
+  { kanda: 'ayodhya', url: '/ayodhya' },
+  { kanda: 'aranya', url: '/aranya' },
+  { kanda: 'kishkindha', url: '/kishkindha' },
+  { kanda: 'sundara', url: '/sundara' },
+  { kanda: 'yuddha', url: '/yuddha' },
 ];
 
 const BREADCRUMBS = [
@@ -35,9 +35,9 @@ const Kanda = () => {
       <Divider sx={{ mb: 1 }} />
       <Box>
         <Grid container spacing={2}>
-          {KANDAS.map(({ kanda }) => (
+          {KANDAS.map(({ kanda, url }) => (
             <Grid key={kanda} xs={6}>
-              <PaddedButton>{kanda}</PaddedButton>
+              <PaddedButton href={`/kanda/${url}`}>{kanda}</PaddedButton>
             </Grid>
           ))}
         </Grid>
