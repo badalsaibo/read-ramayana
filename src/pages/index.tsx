@@ -1,17 +1,9 @@
 import Head from 'next/head';
-import Grid from '@mui/joy/Grid';
 import Typography from '@mui/joy/Typography';
-import PaddedButton from 'components/PaddedButton';
-import { Box, Divider, Stack } from '@mui/joy';
-
-const KANDAS = [
-  { kanda: 'bala' },
-  { kanda: 'ayodhya' },
-  { kanda: 'aranya' },
-  { kanda: 'kishkindha' },
-  { kanda: 'sundara' },
-  { kanda: 'Yuddha' },
-];
+import { Box, Button, Stack } from '@mui/joy';
+import ChevronRightCircle from 'icons/ChevronRightCircle';
+import styled from '@emotion/styled';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -33,18 +25,10 @@ export default function Home() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ad, molestias tenetur quam ipsa nostrum hic
           autem quaerat harum at aspernatur, repellendus illo iusto soluta tempora. Fugit, numquam! Illum, dolore.
         </Typography>
-        <Typography level="h1">Kandas</Typography>
-        <Divider sx={{ mb: 1 }} />
-        <Box>
-          <Grid container spacing={2}>
-            {KANDAS.map(({ kanda }) => (
-              <Grid key={kanda} xs={6}>
-                <PaddedButton>{kanda}</PaddedButton>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
       </Stack>
+      <Button endDecorator={<ChevronRightCircle size={20} />} size="md" component={Link} href="/kanda">
+        Start Reading
+      </Button>
     </>
   );
 }
