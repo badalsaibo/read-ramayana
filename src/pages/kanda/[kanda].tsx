@@ -26,6 +26,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const chapters = getAllChaptersOfKanda(kanda);
 
+  console.log({ chapters });
+
   return {
     props: {
       chapters,
