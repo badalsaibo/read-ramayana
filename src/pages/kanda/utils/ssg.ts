@@ -1,23 +1,29 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-import { TKandas } from '../types';
+import { IChapterMetadata, TKandas } from '../types';
 
 const getDir = (kanda: TKandas) => path.join(process.cwd(), '/src/data/content/kanda/', kanda);
 
-export const getAllChaptersOfKanda = (kanda: TKandas) => {
+export const getAllChaptersOfKanda = (kanda: TKandas): IChapterMetadata[] => {
   // node library to fetch kanda
   const dir = getDir(kanda);
-  const chapterNames = fs.readdirSync(dir);
+  const fileNames = fs.readdirSync(dir);
 
-  const eachDir = path.join(dir, chapterNames[0]);
-  const fileContents = fs.readFileSync(eachDir, 'utf8');
+  const chapterMetadatas = fileNames.map((fileName) => {
+    const dirOfSingleChapter = path.join(dir, fileName);
+    const fileContents = fs.readFileSync(dirOfSingleChapter, 'utf8');
 
-  const { data } = matter(fileContents);
+    const { data } = matter(fileContents);
 
-  console.log({ data });
+    return {
+      slug: fileName.replace(/\.mdx$/, ''),
+      id: data.id,
+      sarga: data.sarga,
+      kanda: data.kanda,
+      title: data.title,
+    };
+  });
 
-  console.log(eachDir);
-
-  return chapterNames;
+  return chapterMetadatas;
 };
