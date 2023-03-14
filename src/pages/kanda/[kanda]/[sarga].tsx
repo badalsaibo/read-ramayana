@@ -1,12 +1,15 @@
-import { Stack, Typography } from '@mui/joy';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { IChapterMetadata, TKanda } from '../interface';
-import { getAllChaptersOfKanda, getAllKandas } from '../utils/ssg';
-import { IParams, IPath } from './interface';
-import { getParsedMarkdownContent } from './utils/ssg';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { MDXRemote } from 'next-mdx-remote';
+
+import Stack from '@mui/joy/Stack';
+import Typography from '@mui/joy/Typography';
+import { IParams, IPath } from './interface';
+import { IChapterMetadata, TKanda } from '../interface';
+import { getParsedMarkdownContent } from './utils/ssg';
+import { getAllChaptersOfKanda, getAllKandas } from '../utils/ssg';
+import Commentary from 'components/Commentary';
+import Markdown from 'components/Markdown';
 
 type TSargaProps = {
   frontMatter: IChapterMetadata;
@@ -45,19 +48,13 @@ export const getStaticProps: GetStaticProps<TSargaProps, IParams> = async ({ par
   };
 };
 
-const Commentary = ({ children }) => <p style={{ backgroundColor: 'red' }}>{children}</p>;
-
-const components = {
-  Commentary,
-};
-
 const Sarga = ({ frontMatter, source }: TSargaProps) => {
   console.log({ frontMatter, source });
   const { title } = frontMatter;
   return (
     <Stack>
       <Typography level="h1">{title}</Typography>
-      <MDXRemote {...source} components={components} />
+      <Markdown {...source} />
     </Stack>
   );
 };
