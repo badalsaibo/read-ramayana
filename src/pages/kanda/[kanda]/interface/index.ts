@@ -13,6 +13,7 @@ export interface IParams extends ParsedUrlQuery {
   
 
 export interface IParsedMarkdownContent {
+  id: string,
   content: string;
   frontMatter: IChapterMetadata;
   }

@@ -37,4 +37,3 @@ export const getAllKandas = () => {
   return fileNames;
 }
  
-export default getAllKandas;

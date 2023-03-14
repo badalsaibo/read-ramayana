@@ -12,13 +12,12 @@ export const getParsedMarkdownContent = ({ kanda, sarga }: IParams): IParsedMark
 
     const { content, data } = matter(processedFile);
 
-    console.log({ content, data })
-
     return {
+        id: data.id,
         content,
         frontMatter: {
             id: data.id,
-            slug: data.slug,
+            slug: sarga,
             sarga: data.sarga,
             kanda: data.kanda,
             title: data.title,
