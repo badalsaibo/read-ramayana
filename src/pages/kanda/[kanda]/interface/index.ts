@@ -1,4 +1,4 @@
-import { TKanda } from 'pages/kanda/interface';
+import { TKanda, IChapterMetadata } from 'pages/kanda/interface';
 import { ParsedUrlQuery } from 'querystring';
 
 
@@ -11,3 +11,8 @@ export interface IParams extends ParsedUrlQuery {
     params: IParams;
   }
   
+
+export interface IParsedMarkdownContent {
+  content: string;
+  frontMatter: IChapterMetadata;
+  }

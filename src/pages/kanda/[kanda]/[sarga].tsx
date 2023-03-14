@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { TKanda } from '../interface';
 import getAllKandas, { getAllChaptersOfKanda } from '../utils/ssg';
 import { IParams, IPath } from './interface';
-import { getProcessedMarkdownContent } from './utils/ssg';
+import { getParsedMarkdownContent } from './utils/ssg';
 
 type TSargaProps = {};
 
@@ -27,7 +27,7 @@ export const getStaticPaths: GetStaticPaths<IParams> = async () => {
 export const getStaticProps: GetStaticProps<TSargaProps, IParams> = async ({ params }) => {
   const { kanda, sarga } = params as IParams;
 
-  const processedContent = getProcessedMarkdownContent({ kanda, sarga });
+  const processedContent = getParsedMarkdownContent({ kanda, sarga });
 
   return {
     props: {},
