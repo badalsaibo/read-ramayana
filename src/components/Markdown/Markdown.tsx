@@ -12,7 +12,7 @@ type Props = {
 
 export default function Markdown(props: MDXRemoteProps) {
   const components = {
-    h1: (props: Props) => <Typography level="h1" {...props} />,
+    h1: (props: Props) => <Typography level="h1" component="h2" fontSize="2rem" {...props} />,
     h2: (props: Props) => <Typography level="h2" {...props} />,
     h3: (props: Props) => <Typography level="h3" {...props} />,
     h4: (props: Props) => <Typography level="h4" {...props} />,
@@ -31,7 +31,7 @@ export default function Markdown(props: MDXRemoteProps) {
 
 const Root = styled(Box)(({ theme }) => ({
   paddingBottom: theme.spacing(10),
-  '& > p': {
+  '& p': {
     marginBottom: '1rem',
     marginTop: '1rem',
   },

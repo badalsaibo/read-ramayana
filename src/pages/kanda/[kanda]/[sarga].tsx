@@ -53,7 +53,9 @@ const Sarga = ({ frontMatter, source }: TSargaProps) => {
   const { title } = frontMatter;
   return (
     <Stack>
-      <Typography level="h1">{title}</Typography>
+      <Typography level="h1" fontSize="2.5rem">
+        {title}
+      </Typography>
       <Markdown {...source} />
     </Stack>
   );
