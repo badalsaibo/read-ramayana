@@ -1,0 +1,835 @@
+[
+    {
+        "id": "1",
+        "kanda": "ayodhya",
+        "sarga": "1",
+        "chapter": "1",
+        "title": "Rama, The Hero"
+    },
+    {
+        "id": "2",
+        "kanda": "ayodhya",
+        "sarga": "2",
+        "chapter": "2",
+        "title": "Dasharatha's Desire"
+    },
+    {
+        "id": "3",
+        "kanda": "ayodhya",
+        "sarga": "3",
+        "chapter": "3",
+        "title": "Preparing for the Ceremony"
+    },
+    {
+        "id": "4",
+        "kanda": "ayodhya",
+        "sarga": "4",
+        "chapter": "4",
+        "title": "Dasharatha's Premonition"
+    },
+    {
+        "id": "5",
+        "kanda": "ayodhya",
+        "sarga": "5",
+        "chapter": "5",
+        "title": "Festivities in Ayodhya"
+    },
+    {
+        "id": "6",
+        "kanda": "ayodhya",
+        "sarga": "6",
+        "chapter": "6",
+        "title": "Joy of a city"
+    },
+    {
+        "id": "7",
+        "kanda": "ayodhya",
+        "sarga": "7",
+        "chapter": "7",
+        "title": "The wicked Manthara"
+    },
+    {
+        "id": "8",
+        "kanda": "ayodhya",
+        "sarga": "8",
+        "chapter": "8",
+        "title": "Manthara's sinful words"
+    },
+    {
+        "id": "9",
+        "kanda": "ayodhya",
+        "sarga": "9",
+        "chapter": "9",
+        "title": "Manthara's success in poisoning Kaikeyi's mind"
+    },
+    {
+        "id": "10",
+        "kanda": "ayodhya",
+        "sarga": "10",
+        "chapter": "10",
+        "title": "Kaikeyi enters the house of wrath"
+    },
+    {
+        "id": "11",
+        "kanda": "ayodhya",
+        "sarga": "11",
+        "chapter": "11",
+        "title": "Kaikeyi's evil boons"
+    },
+    {
+        "id": "12",
+        "kanda": "ayodhya",
+        "sarga": "12",
+        "chapter": "12",
+        "title": "Dasharatha's reaction and Kaikeyi's adamant nature"
+    },
+    {
+        "id": "13",
+        "kanda": "ayodhya",
+        "sarga": "13",
+        "chapter": "13",
+        "title": "Dasharatha's grief and anguish"
+    },
+    {
+        "id": "14",
+        "kanda": "ayodhya",
+        "sarga": "14",
+        "chapter": "14",
+        "title": "The night passes"
+    },
+    {
+        "id": "15",
+        "kanda": "ayodhya",
+        "sarga": "15",
+        "chapter": "15",
+        "title": "Sumantra arrives at Sri Rama's chambers"
+    },
+    {
+        "id": "16",
+        "kanda": "ayodhya",
+        "sarga": "16",
+        "chapter": "16",
+        "title": "Jubilant city of Ayodhya"
+    },
+    {
+        "id": "17",
+        "kanda": "ayodhya",
+        "sarga": "17",
+        "chapter": "17",
+        "title": "Rama's arrival at royal court"
+    },
+    {
+        "id": "18",
+        "kanda": "ayodhya",
+        "sarga": "18",
+        "chapter": "18",
+        "title": "Kaikeyi's harsh words"
+    },
+    {
+        "id": "19",
+        "kanda": "ayodhya",
+        "sarga": "19",
+        "chapter": "19",
+        "title": "Rama decides to leave for forest"
+    },
+    {
+        "id": "20",
+        "kanda": "ayodhya",
+        "sarga": "20",
+        "chapter": "20",
+        "title": "Kausalya's grief"
+    },
+    {
+        "id": "21",
+        "kanda": "ayodhya",
+        "sarga": "21",
+        "chapter": "21",
+        "title": "Rama consoles angry Lakshmana"
+    },
+    {
+        "id": "22",
+        "kanda": "ayodhya",
+        "sarga": "22",
+        "chapter": "22",
+        "title": "Rama tries to pacify Lakshmana further"
+    },
+    {
+        "id": "23",
+        "kanda": "ayodhya",
+        "sarga": "23",
+        "chapter": "23",
+        "title": "Lakshmana's angry words"
+    },
+    {
+        "id": "24",
+        "kanda": "ayodhya",
+        "sarga": "24",
+        "chapter": "24",
+        "title": "Rama obtains Kausalya's permission"
+    },
+    {
+        "id": "25",
+        "kanda": "ayodhya",
+        "sarga": "25",
+        "chapter": "25",
+        "title": "Kausalya bids farewell to Rama"
+    },
+    {
+        "id": "26",
+        "kanda": "ayodhya",
+        "sarga": "26",
+        "chapter": "26",
+        "title": "Rama lets Sita know of King's wish"
+    },
+    {
+        "id": "27",
+        "kanda": "ayodhya",
+        "sarga": "27",
+        "chapter": "27",
+        "title": "Sita's wish to go to forest along with Rama"
+    },
+    {
+        "id": "28",
+        "kanda": "ayodhya",
+        "sarga": "28",
+        "chapter": "28",
+        "title": "Rama warns Sita of difficulties of staying in forest"
+    },
+    {
+        "id": "29",
+        "kanda": "ayodhya",
+        "sarga": "29",
+        "chapter": "29",
+        "title": "Sita's insistence on going to the forest"
+    },
+    {
+        "id": "30",
+        "kanda": "ayodhya",
+        "sarga": "30",
+        "chapter": "30",
+        "title": "Rama agrees to take Sita to the forest"
+    },
+    {
+        "id": "31",
+        "kanda": "ayodhya",
+        "sarga": "31",
+        "chapter": "31",
+        "title": "Lakshmana too is permitted to go to the forest"
+    },
+    {
+        "id": "32",
+        "kanda": "ayodhya",
+        "sarga": "32",
+        "chapter": "32",
+        "title": "Rama distributes his wealth to Rishis"
+    },
+    {
+        "id": "33",
+        "kanda": "ayodhya",
+        "sarga": "33",
+        "chapter": "33",
+        "title": "Rama pays respects to his father at departure"
+    },
+    {
+        "id": "34",
+        "kanda": "ayodhya",
+        "sarga": "34",
+        "chapter": "34",
+        "title": "Rama consoles Dasharatha"
+    },
+    {
+        "id": "35",
+        "kanda": "ayodhya",
+        "sarga": "35",
+        "chapter": "35",
+        "title": "Sumantra Rails at Kaikeyi"
+    },
+    {
+        "id": "36",
+        "kanda": "ayodhya",
+        "sarga": "36",
+        "chapter": "36",
+        "title": "Siddhartha tries to persuade Kaikeyi"
+    },
+    {
+        "id": "37",
+        "kanda": "ayodhya",
+        "sarga": "37",
+        "chapter": "37",
+        "title": "Kaikeyi offers tree bark to Sita to wear"
+    },
+    {
+        "id": "38",
+        "kanda": "ayodhya",
+        "sarga": "38",
+        "chapter": "38",
+        "title": "Dasharatha is enraged"
+    },
+    {
+        "id": "39",
+        "kanda": "ayodhya",
+        "sarga": "39",
+        "chapter": "39",
+        "title": "Rama seeks blessings of his mother"
+    },
+    {
+        "id": "40",
+        "kanda": "ayodhya",
+        "sarga": "40",
+        "chapter": "40",
+        "title": "Rama's departure from Ayodhya"
+    },
+    {
+        "id": "41",
+        "kanda": "ayodhya",
+        "sarga": "41",
+        "chapter": "41",
+        "title": "The Grief"
+    },
+    {
+        "id": "42",
+        "kanda": "ayodhya",
+        "sarga": "42",
+        "chapter": "42",
+        "title": "Dasharatha feels dejected"
+    },
+    {
+        "id": "43",
+        "kanda": "ayodhya",
+        "sarga": "43",
+        "chapter": "43",
+        "title": "Lamentation of Kausalya"
+    },
+    {
+        "id": "44",
+        "kanda": "ayodhya",
+        "sarga": "44",
+        "chapter": "44",
+        "title": "Sumitra assuages Kausalya's grief"
+    },
+    {
+        "id": "45",
+        "kanda": "ayodhya",
+        "sarga": "45",
+        "chapter": "45",
+        "title": "Rama requests the citizens to return to Ayodhya"
+    },
+    {
+        "id": "46",
+        "kanda": "ayodhya",
+        "sarga": "46",
+        "chapter": "46",
+        "title": "Rama passes the night on the banks of Tamasa river."
+    },
+    {
+        "id": "47",
+        "kanda": "ayodhya",
+        "sarga": "47",
+        "chapter": "47",
+        "title": "The people of Ayodhya begin to rebuke themselves"
+    },
+    {
+        "id": "48",
+        "kanda": "ayodhya",
+        "sarga": "48",
+        "chapter": "48",
+        "title": "Rama's departure for the forest"
+    },
+    {
+        "id": "49",
+        "kanda": "ayodhya",
+        "sarga": "49",
+        "chapter": "49",
+        "title": "Rama crossed three rivers"
+    },
+    {
+        "id": "50",
+        "kanda": "ayodhya",
+        "sarga": "50",
+        "chapter": "50",
+        "title": "Rama bids farewell to his birth-place"
+    },
+    {
+        "id": "51",
+        "kanda": "ayodhya",
+        "sarga": "51",
+        "chapter": "51",
+        "title": "Guha requests Lakshmana to take rest"
+    },
+    {
+        "id": "52",
+        "kanda": "ayodhya",
+        "sarga": "52",
+        "chapter": "52",
+        "title": "Guha gets a boat ready"
+    },
+    {
+        "id": "53",
+        "kanda": "ayodhya",
+        "sarga": "53",
+        "chapter": "53",
+        "title": "Rama tries to send Lakshmana back to Ayodhya"
+    },
+    {
+        "id": "54",
+        "kanda": "ayodhya",
+        "sarga": "54",
+        "chapter": "54",
+        "title": "The hermitage of Bharadwaja"
+    },
+    {
+        "id": "55",
+        "kanda": "ayodhya",
+        "sarga": "55",
+        "chapter": "55",
+        "title": "Sage Bharadwaja informs the route of Chitrakuta"
+    },
+    {
+        "id": "56",
+        "kanda": "ayodhya",
+        "sarga": "56",
+        "chapter": "56",
+        "title": "The Chitrakuta Mountain"
+    },
+    {
+        "id": "57",
+        "kanda": "ayodhya",
+        "sarga": "57",
+        "chapter": "57",
+        "title": "Sumantra drives back to Ayodhya"
+    },
+    {
+        "id": "58",
+        "kanda": "ayodhya",
+        "sarga": "58",
+        "chapter": "58",
+        "title": "Sumantra delivers the messages of Rama"
+    },
+    {
+        "id": "59",
+        "kanda": "ayodhya",
+        "sarga": "59",
+        "chapter": "59",
+        "title": "Dasharatha falls unconscious"
+    },
+    {
+        "id": "60",
+        "kanda": "ayodhya",
+        "sarga": "60",
+        "chapter": "60",
+        "title": "Sumantra was unable to console Kausalya"
+    },
+    {
+        "id": "61",
+        "kanda": "ayodhya",
+        "sarga": "61",
+        "chapter": "61",
+        "title": "Kausalya rebukes Dasharatha for his evil act"
+    },
+    {
+        "id": "62",
+        "kanda": "ayodhya",
+        "sarga": "62",
+        "chapter": "62",
+        "title": "King Dasharatha loses consciousness"
+    },
+    {
+        "id": "63",
+        "kanda": "ayodhya",
+        "sarga": "63",
+        "chapter": "63",
+        "title": "Dasharatha narrates his sin to Kausalya"
+    },
+    {
+        "id": "64",
+        "kanda": "ayodhya",
+        "sarga": "64",
+        "chapter": "64",
+        "title": "Dasharatha continued to narrate to Kausalya"
+    },
+    {
+        "id": "65",
+        "kanda": "ayodhya",
+        "sarga": "65",
+        "chapter": "65",
+        "title": "Dasharatha passes away"
+    },
+    {
+        "id": "66",
+        "kanda": "ayodhya",
+        "sarga": "66",
+        "chapter": "66",
+        "title": "Kausalya reproaches Kaikeyi"
+    },
+    {
+        "id": "67",
+        "kanda": "ayodhya",
+        "sarga": "67",
+        "chapter": "67",
+        "title": "Brahmins urge Vasishta to select a youth to be the king"
+    },
+    {
+        "id": "68",
+        "kanda": "ayodhya",
+        "sarga": "68",
+        "chapter": "68",
+        "title": "Vasishta instructs messengers to call Bharata and Satrughna"
+    },
+    {
+        "id": "69",
+        "kanda": "ayodhya",
+        "sarga": "69",
+        "chapter": "69",
+        "title": "Bharata experiences a bad dream"
+    },
+    {
+        "id": "70",
+        "kanda": "ayodhya",
+        "sarga": "70",
+        "chapter": "70",
+        "title": "The messengers enter the city of Rajagriha"
+    },
+    {
+        "id": "71",
+        "kanda": "ayodhya",
+        "sarga": "71",
+        "chapter": "71",
+        "title": "Bharata reaches the city of Ayodhya"
+    },
+    {
+        "id": "72",
+        "kanda": "ayodhya",
+        "sarga": "72",
+        "chapter": "72",
+        "title": "Kaikeyi informs Bharata about the death of Dasharatha"
+    },
+    {
+        "id": "73",
+        "kanda": "ayodhya",
+        "sarga": "73",
+        "chapter": "73",
+        "title": "Bharata reproaches Kaikeyi in many ways"
+    },
+    {
+        "id": "74",
+        "kanda": "ayodhya",
+        "sarga": "74",
+        "chapter": "74",
+        "title": "Bharata then promises that he would bring Rama back"
+    },
+    {
+        "id": "75",
+        "kanda": "ayodhya",
+        "sarga": "75",
+        "chapter": "75",
+        "title": "Bharata and Satrughna go to Kausalya's palace"
+    },
+    {
+        "id": "76",
+        "kanda": "ayodhya",
+        "sarga": "76",
+        "chapter": "76",
+        "title": "Advice of Vasishta to Bharata"
+    },
+    {
+        "id": "77",
+        "kanda": "ayodhya",
+        "sarga": "77",
+        "chapter": "77",
+        "title": "Bharata and Shatrughna grieve on cremation ground"
+    },
+    {
+        "id": "78",
+        "kanda": "ayodhya",
+        "sarga": "78",
+        "chapter": "78",
+        "title": "Shatrughna seizes Manthara and threatens to punish her"
+    },
+    {
+        "id": "79",
+        "kanda": "ayodhya",
+        "sarga": "79",
+        "chapter": "79",
+        "title": "The king-makers request Bharata to take over Ayodhya kingdom"
+    },
+    {
+        "id": "80",
+        "kanda": "ayodhya",
+        "sarga": "80",
+        "chapter": "80",
+        "title": "Construction of a high-way from Ayodhya to River Ganga"
+    },
+    {
+        "id": "81",
+        "kanda": "ayodhya",
+        "sarga": "81",
+        "chapter": "81",
+        "title": "Bharata with Shatrughna enters the assembly"
+    },
+    {
+        "id": "82",
+        "kanda": "ayodhya",
+        "sarga": "82",
+        "chapter": "82",
+        "title": "Bharata refuses to rob the throne from Rama."
+    },
+    {
+        "id": "83",
+        "kanda": "ayodhya",
+        "sarga": "83",
+        "chapter": "83",
+        "title": "Bharata goes to see Rama"
+    },
+    {
+        "id": "84",
+        "kanda": "ayodhya",
+        "sarga": "84",
+        "chapter": "84",
+        "title": "Guha welcomes Bharata with drink of honey and meat"
+    },
+    {
+        "id": "85",
+        "kanda": "ayodhya",
+        "sarga": "85",
+        "chapter": "85",
+        "title": "Bharata thanks Guha for his hospitality"
+    },
+    {
+        "id": "86",
+        "kanda": "ayodhya",
+        "sarga": "86",
+        "chapter": "86",
+        "title": "Guha narrates Bharata about Rama's stay"
+    },
+    {
+        "id": "87",
+        "kanda": "ayodhya",
+        "sarga": "87",
+        "chapter": "87",
+        "title": "Guha reports further details of Rama"
+    },
+    {
+        "id": "88",
+        "kanda": "ayodhya",
+        "sarga": "88",
+        "chapter": "88",
+        "title": "Bharata approaches the foot of Angudi tree"
+    },
+    {
+        "id": "89",
+        "kanda": "ayodhya",
+        "sarga": "89",
+        "chapter": "89",
+        "title": "Bharata asks Guha to to ferry them across the river by boats."
+    },
+    {
+        "id": "90",
+        "kanda": "ayodhya",
+        "sarga": "90",
+        "chapter": "90",
+        "title": "Bharata proceeds to see Bharadwaja"
+    },
+    {
+        "id": "91",
+        "kanda": "ayodhya",
+        "sarga": "91",
+        "chapter": "91",
+        "title": "Bharadwaja arranges a befitting hospitality to Bharata."
+    },
+    {
+        "id": "92",
+        "kanda": "ayodhya",
+        "sarga": "92",
+        "chapter": "92",
+        "title": "Bharata approaches Bharadwaja"
+    },
+    {
+        "id": "93",
+        "kanda": "ayodhya",
+        "sarga": "93",
+        "chapter": "93",
+        "title": "Bharata and his army reach Chitrakuta mountain"
+    },
+    {
+        "id": "94",
+        "kanda": "ayodhya",
+        "sarga": "94",
+        "chapter": "94",
+        "title": "Rama shows the captivating scenery of Chitrakuta to Sita"
+    },
+    {
+        "id": "95",
+        "kanda": "ayodhya",
+        "sarga": "95",
+        "chapter": "95",
+        "title": "Rama and Sita spend some time at Mandakini River"
+    },
+    {
+        "id": "96",
+        "kanda": "ayodhya",
+        "sarga": "96",
+        "chapter": "96",
+        "title": "Rama hears a gigantic clamour of an army"
+    },
+    {
+        "id": "97",
+        "kanda": "ayodhya",
+        "sarga": "97",
+        "chapter": "97",
+        "title": "Rama pacifies Lakshmana, who is angry with Bharata"
+    },
+    {
+        "id": "98",
+        "kanda": "ayodhya",
+        "sarga": "98",
+        "chapter": "98",
+        "title": "Bharata continues his search for Rama's hermitage"
+    },
+    {
+        "id": "99",
+        "kanda": "ayodhya",
+        "sarga": "99",
+        "chapter": "99",
+        "title": "Bharata beholds Rama's hermitage and approaches it"
+    },
+    {
+        "id": "100",
+        "kanda": "ayodhya",
+        "sarga": "100",
+        "chapter": "100",
+        "title": "Rama enquires his father's welfare with Bharata"
+    },
+    {
+        "id": "101",
+        "kanda": "ayodhya",
+        "sarga": "101",
+        "chapter": "101",
+        "title": "Bharata informs Rama about Dasharatha's death"
+    },
+    {
+        "id": "102",
+        "kanda": "ayodhya",
+        "sarga": "102",
+        "chapter": "102",
+        "title": "Bharata requests Rama to come to Ayodhya"
+    },
+    {
+        "id": "103",
+        "kanda": "ayodhya",
+        "sarga": "103",
+        "chapter": "103",
+        "title": "Rama fainted away, after hearing the news of his father's death"
+    },
+    {
+        "id": "104",
+        "kanda": "ayodhya",
+        "sarga": "104",
+        "chapter": "104",
+        "title": "Vasishta advances to the hermitage of Rama."
+    },
+    {
+        "id": "105",
+        "kanda": "ayodhya",
+        "sarga": "105",
+        "chapter": "105",
+        "title": "Bharata requests Rama to accept the kingdom"
+    },
+    {
+        "id": "106",
+        "kanda": "ayodhya",
+        "sarga": "106",
+        "chapter": "106",
+        "title": "Bharata gives many reasons to Rama to accept the throne"
+    },
+    {
+        "id": "107",
+        "kanda": "ayodhya",
+        "sarga": "107",
+        "chapter": "107",
+        "title": "Rama tells Bharata about Dasharatha's promise of kingdom"
+    },
+    {
+        "id": "108",
+        "kanda": "ayodhya",
+        "sarga": "108",
+        "chapter": "108",
+        "title": "Jabali tries to persuade Rama to accept the Kingdom"
+    },
+    {
+        "id": "109",
+        "kanda": "ayodhya",
+        "sarga": "109",
+        "chapter": "109",
+        "title": "Rama refutes the atheistic arguments of Jabali"
+    },
+    {
+        "id": "110",
+        "kanda": "ayodhya",
+        "sarga": "110",
+        "chapter": "110",
+        "title": "Vasishta gives details of the creation of the world to Sri Rama."
+    },
+    {
+        "id": "111",
+        "kanda": "ayodhya",
+        "sarga": "111",
+        "chapter": "111",
+        "title": "Vashishta urges Rama to grant the prayer of Bharata"
+    },
+    {
+        "id": "112",
+        "kanda": "ayodhya",
+        "sarga": "112",
+        "chapter": "112",
+        "title": "The sages requests Bharata to accept Rama's words"
+    },
+    {
+        "id": "113",
+        "kanda": "ayodhya",
+        "sarga": "113",
+        "chapter": "113",
+        "title": "Keeping Rama's sandals on his head, Bharata ascends his chariot"
+    },
+    {
+        "id": "114",
+        "kanda": "ayodhya",
+        "sarga": "114",
+        "chapter": "114",
+        "title": "Bharata enters Ayodhya city"
+    },
+    {
+        "id": "115",
+        "kanda": "ayodhya",
+        "sarga": "115",
+        "chapter": "115",
+        "title": "Bharata expresses his desire to proceed to Nandigrama village"
+    },
+    {
+        "id": "116",
+        "kanda": "ayodhya",
+        "sarga": "116",
+        "chapter": "116",
+        "title": "Rama notices anxiety among the sages who live in the vicinity"
+    },
+    {
+        "id": "117",
+        "kanda": "ayodhya",
+        "sarga": "117",
+        "chapter": "117",
+        "title": "Rama decides to leave Chitrakuta Mountain"
+    },
+    {
+        "id": "118",
+        "kanda": "ayodhya",
+        "sarga": "118",
+        "chapter": "118",
+        "title": "Anasuya instructs Sita on the role of a devoted wife"
+    },
+    {
+        "id": "119",
+        "kanda": "ayodhya",
+        "sarga": "119",
+        "chapter": "119",
+        "title": "Sita shows the gifts of Anasuya to Rama."
+    }
+]

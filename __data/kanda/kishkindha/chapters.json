@@ -1,0 +1,471 @@
+[
+    {
+        "id": "1",
+        "kanda": "kishkindha",
+        "sarga": "1",
+        "chapter": "1",
+        "title": "Sri Rama at Pampa Lake lamenting for Sita"
+    },
+    {
+        "id": "2",
+        "kanda": "kishkindha",
+        "sarga": "2",
+        "chapter": "2",
+        "title": "The fearless Hanuman"
+    },
+    {
+        "id": "3",
+        "kanda": "kishkindha",
+        "sarga": "3",
+        "chapter": "3",
+        "title": "Hanuman meets Sri Rama"
+    },
+    {
+        "id": "4",
+        "kanda": "kishkindha",
+        "sarga": "4",
+        "chapter": "4",
+        "title": "Lakshmana's narration to Hanuman"
+    },
+    {
+        "id": "5",
+        "kanda": "kishkindha",
+        "sarga": "5",
+        "chapter": "5",
+        "title": "Oath of friendship"
+    },
+    {
+        "id": "6",
+        "kanda": "kishkindha",
+        "sarga": "6",
+        "chapter": "6",
+        "title": "Sugreeva's narration of the abduction"
+    },
+    {
+        "id": "7",
+        "kanda": "kishkindha",
+        "sarga": "7",
+        "chapter": "7",
+        "title": "Friendly discourse"
+    },
+    {
+        "id": "8",
+        "kanda": "kishkindha",
+        "sarga": "8",
+        "chapter": "8",
+        "title": "The tale of enmity between Vali and Sugreeva"
+    },
+    {
+        "id": "9",
+        "kanda": "kishkindha",
+        "sarga": "9",
+        "chapter": "9",
+        "title": "The strength of Vali"
+    },
+    {
+        "id": "10",
+        "kanda": "kishkindha",
+        "sarga": "10",
+        "chapter": "10",
+        "title": "Banishment of Sugreeva by Vali"
+    },
+    {
+        "id": "11",
+        "kanda": "kishkindha",
+        "sarga": "11",
+        "chapter": "11",
+        "title": "The incident of Dundubhi"
+    },
+    {
+        "id": "12",
+        "kanda": "kishkindha",
+        "sarga": "12",
+        "chapter": "12",
+        "title": "The initial challenge"
+    },
+    {
+        "id": "13",
+        "kanda": "kishkindha",
+        "sarga": "13",
+        "chapter": "13",
+        "title": "Saptajana hermitage"
+    },
+    {
+        "id": "14",
+        "kanda": "kishkindha",
+        "sarga": "14",
+        "chapter": "14",
+        "title": "The second challenge"
+    },
+    {
+        "id": "15",
+        "kanda": "kishkindha",
+        "sarga": "15",
+        "chapter": "15",
+        "title": "Tara's advice"
+    },
+    {
+        "id": "16",
+        "kanda": "kishkindha",
+        "sarga": "16",
+        "chapter": "16",
+        "title": "Sugreeva's second fight and Vali's falling down"
+    },
+    {
+        "id": "17",
+        "kanda": "kishkindha",
+        "sarga": "17",
+        "chapter": "17",
+        "title": "Vali's questioning Rama's propriety"
+    },
+    {
+        "id": "18",
+        "kanda": "kishkindha",
+        "sarga": "18",
+        "chapter": "18",
+        "title": "Rama's elucidation of dharma to vali"
+    },
+    {
+        "id": "19",
+        "kanda": "kishkindha",
+        "sarga": "19",
+        "chapter": "19",
+        "title": "Tara's arrival at Vali in battlefield"
+    },
+    {
+        "id": "20",
+        "kanda": "kishkindha",
+        "sarga": "20",
+        "chapter": "20",
+        "title": "Tara's lamentation for Vali's death"
+    },
+    {
+        "id": "21",
+        "kanda": "kishkindha",
+        "sarga": "21",
+        "chapter": "21",
+        "title": "Hanuman consoles Tara"
+    },
+    {
+        "id": "22",
+        "kanda": "kishkindha",
+        "sarga": "22",
+        "chapter": "22",
+        "title": "Vali's death-time advises"
+    },
+    {
+        "id": "23",
+        "kanda": "kishkindha",
+        "sarga": "23",
+        "chapter": "23",
+        "title": "Tara's lament for death of Vali"
+    },
+    {
+        "id": "24",
+        "kanda": "kishkindha",
+        "sarga": "24",
+        "chapter": "24",
+        "title": "Tara Sugreeva's resolve to die with Valii"
+    },
+    {
+        "id": "25",
+        "kanda": "kishkindha",
+        "sarga": "25",
+        "chapter": "25",
+        "title": "Vali's funeral ritual"
+    },
+    {
+        "id": "26",
+        "kanda": "kishkindha",
+        "sarga": "26",
+        "chapter": "26",
+        "title": "Sugreeva's coronation"
+    },
+    {
+        "id": "27",
+        "kanda": "kishkindha",
+        "sarga": "27",
+        "chapter": "27",
+        "title": "Rama at Mt. Prasavana"
+    },
+    {
+        "id": "28",
+        "kanda": "kishkindha",
+        "sarga": "28",
+        "chapter": "28",
+        "title": "Eulogy on Rainy Season"
+    },
+    {
+        "id": "29",
+        "kanda": "kishkindha",
+        "sarga": "29",
+        "chapter": "29",
+        "title": "Hanuman's advise to Sugreeva"
+    },
+    {
+        "id": "30",
+        "kanda": "kishkindha",
+        "sarga": "30",
+        "chapter": "30",
+        "title": "Autumn [Sharad R^itu] eulogised"
+    },
+    {
+        "id": "31",
+        "kanda": "kishkindha",
+        "sarga": "31",
+        "chapter": "31",
+        "title": "Lakshmana's fury"
+    },
+    {
+        "id": "32",
+        "kanda": "kishkindha",
+        "sarga": "32",
+        "chapter": "32",
+        "title": "Hanuman's advise to Sugreeva"
+    },
+    {
+        "id": "33",
+        "kanda": "kishkindha",
+        "sarga": "33",
+        "chapter": "33",
+        "title": "Lakshmana's fury, Tara's pacifying"
+    },
+    {
+        "id": "34",
+        "kanda": "kishkindha",
+        "sarga": "34",
+        "chapter": "34",
+        "title": "Lakshmana upbraids Sugreeva"
+    },
+    {
+        "id": "35",
+        "kanda": "kishkindha",
+        "sarga": "35",
+        "chapter": "35",
+        "title": "Tara appeases Lakshmana"
+    },
+    {
+        "id": "36",
+        "kanda": "kishkindha",
+        "sarga": "36",
+        "chapter": "36",
+        "title": "Sugreeva's apology pacifies Lakshmana"
+    },
+    {
+        "id": "37",
+        "kanda": "kishkindha",
+        "sarga": "37",
+        "chapter": "37",
+        "title": "Monkey chiefs go round the earth"
+    },
+    {
+        "id": "38",
+        "kanda": "kishkindha",
+        "sarga": "38",
+        "chapter": "38",
+        "title": "Sugreeva approaches Rama"
+    },
+    {
+        "id": "39",
+        "kanda": "kishkindha",
+        "sarga": "39",
+        "chapter": "39",
+        "title": "Rama mildly admonishes Sugreeva"
+    },
+    {
+        "id": "40",
+        "kanda": "kishkindha",
+        "sarga": "40",
+        "chapter": "40",
+        "title": "Sugreeva orders Eastside search"
+    },
+    {
+        "id": "41",
+        "kanda": "kishkindha",
+        "sarga": "41",
+        "chapter": "41",
+        "title": "Sugreeva sends Vanara-s to Southward"
+    },
+    {
+        "id": "42",
+        "kanda": "kishkindha",
+        "sarga": "42",
+        "chapter": "42",
+        "title": "Sugreeva sends troops to west side"
+    },
+    {
+        "id": "43",
+        "kanda": "kishkindha",
+        "sarga": "43",
+        "chapter": "43",
+        "title": "Sugreeva sends troops to north"
+    },
+    {
+        "id": "44",
+        "kanda": "kishkindha",
+        "sarga": "44",
+        "chapter": "44",
+        "title": "Rama gives ring to Hanuman"
+    },
+    {
+        "id": "45",
+        "kanda": "kishkindha",
+        "sarga": "45",
+        "chapter": "45",
+        "title": "The war cries of monkey soldiers"
+    },
+    {
+        "id": "46",
+        "kanda": "kishkindha",
+        "sarga": "46",
+        "chapter": "46",
+        "title": "Sugreeva's knowledge of physical world"
+    },
+    {
+        "id": "47",
+        "kanda": "kishkindha",
+        "sarga": "47",
+        "chapter": "47",
+        "title": "Search for Sita failed in east, north, and west"
+    },
+    {
+        "id": "48",
+        "kanda": "kishkindha",
+        "sarga": "48",
+        "chapter": "48",
+        "title": "Hanuman's search for Sita"
+    },
+    {
+        "id": "49",
+        "kanda": "kishkindha",
+        "sarga": "49",
+        "chapter": "49",
+        "title": "Angada encourages all of the monkeys"
+    },
+    {
+        "id": "50",
+        "kanda": "kishkindha",
+        "sarga": "50",
+        "chapter": "50",
+        "title": "Search of Vanaras in Riksha cavity,"
+    },
+    {
+        "id": "51",
+        "kanda": "kishkindha",
+        "sarga": "51",
+        "chapter": "51",
+        "title": "The legend of Black Cave"
+    },
+    {
+        "id": "52",
+        "kanda": "kishkindha",
+        "sarga": "52",
+        "chapter": "52",
+        "title": "Vanaras deliverance from black hole"
+    },
+    {
+        "id": "53",
+        "kanda": "kishkindha",
+        "sarga": "53",
+        "chapter": "53",
+        "title": "Angada proposes fast unto death"
+    },
+    {
+        "id": "54",
+        "kanda": "kishkindha",
+        "sarga": "54",
+        "chapter": "54",
+        "title": "Hanuman advises Angada"
+    },
+    {
+        "id": "55",
+        "kanda": "kishkindha",
+        "sarga": "55",
+        "chapter": "55",
+        "title": "Monkeys decide to fast unto death"
+    },
+    {
+        "id": "56",
+        "kanda": "kishkindha",
+        "sarga": "56",
+        "chapter": "56",
+        "title": "Sampaati hears of Jataayu's death"
+    },
+    {
+        "id": "57",
+        "kanda": "kishkindha",
+        "sarga": "57",
+        "chapter": "57",
+        "title": "Angada informs their plight to Sampaati"
+    },
+    {
+        "id": "58",
+        "kanda": "kishkindha",
+        "sarga": "58",
+        "chapter": "58",
+        "title": "Sampaati informs Angada about Sita"
+    },
+    {
+        "id": "59",
+        "kanda": "kishkindha",
+        "sarga": "59",
+        "chapter": "59",
+        "title": "Sampaati details Angada about Sita"
+    },
+    {
+        "id": "60",
+        "kanda": "kishkindha",
+        "sarga": "60",
+        "chapter": "60",
+        "title": "Sampaati narrates his legend"
+    },
+    {
+        "id": "61",
+        "kanda": "kishkindha",
+        "sarga": "61",
+        "chapter": "61",
+        "title": "Sampaati's legend [contd.]"
+    },
+    {
+        "id": "62",
+        "kanda": "kishkindha",
+        "sarga": "62",
+        "chapter": "62",
+        "title": "Sampaati's legend [contd.]"
+    },
+    {
+        "id": "63",
+        "kanda": "kishkindha",
+        "sarga": "63",
+        "chapter": "63",
+        "title": "Sampaati gets new wings and flew away"
+    },
+    {
+        "id": "64",
+        "kanda": "kishkindha",
+        "sarga": "64",
+        "chapter": "64",
+        "title": "Monkeys arrive at seashore"
+    },
+    {
+        "id": "65",
+        "kanda": "kishkindha",
+        "sarga": "65",
+        "chapter": "65",
+        "title": "Monkeys fear to jump the ocean"
+    },
+    {
+        "id": "66",
+        "kanda": "kishkindha",
+        "sarga": "66",
+        "chapter": "66",
+        "title": "Legend of Hanuman's birth"
+    },
+    {
+        "id": "67",
+        "kanda": "kishkindha",
+        "sarga": "67",
+        "chapter": "67",
+        "title": "Hanuman asserts his capabilities to leap the ocean"
+    }
+]

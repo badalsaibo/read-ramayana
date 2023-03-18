@@ -1,0 +1,527 @@
+[
+    {
+        "id": "1",
+        "kanda": "aranya",
+        "sarga": "1",
+        "chapter": "1",
+        "title": "Entering Dandaka Forest"
+    },
+    {
+        "id": "2",
+        "kanda": "aranya",
+        "sarga": "2",
+        "chapter": "2",
+        "title": "Confrontation with Viradha"
+    },
+    {
+        "id": "3",
+        "kanda": "aranya",
+        "sarga": "3",
+        "chapter": "3",
+        "title": "Viradha attacks Sri Rama and Lakshmana"
+    },
+    {
+        "id": "4",
+        "kanda": "aranya",
+        "sarga": "4",
+        "chapter": "4",
+        "title": "Curse of Viradha"
+    },
+    {
+        "id": "5",
+        "kanda": "aranya",
+        "sarga": "5",
+        "chapter": "5",
+        "title": "Hermitage of Sage Sharabhanga"
+    },
+    {
+        "id": "6",
+        "kanda": "aranya",
+        "sarga": "6",
+        "chapter": "6",
+        "title": "Approach of Sages and Hermits"
+    },
+    {
+        "id": "7",
+        "kanda": "aranya",
+        "sarga": "7",
+        "chapter": "7",
+        "title": "Hermitage of Sage Suteekshna"
+    },
+    {
+        "id": "8",
+        "kanda": "aranya",
+        "sarga": "8",
+        "chapter": "8",
+        "title": "Dialogue with Sage Suteekshna"
+    },
+    {
+        "id": "9",
+        "kanda": "aranya",
+        "sarga": "9",
+        "chapter": "9",
+        "title": "Sita concerned about Sri Rama's vow to kill demons"
+    },
+    {
+        "id": "10",
+        "kanda": "aranya",
+        "sarga": "10",
+        "chapter": "10",
+        "title": "Sri Rama's reply to Sita"
+    },
+    {
+        "id": "11",
+        "kanda": "aranya",
+        "sarga": "11",
+        "chapter": "11",
+        "title": "Stories of Sages Mandakarani and Agastya"
+    },
+    {
+        "id": "12",
+        "kanda": "aranya",
+        "sarga": "12",
+        "chapter": "12",
+        "title": "Entering the hermitage of Sage Agastya"
+    },
+    {
+        "id": "13",
+        "kanda": "aranya",
+        "sarga": "13",
+        "chapter": "13",
+        "title": "Sage Agastya directs Sri Rama to Panchavati"
+    },
+    {
+        "id": "14",
+        "kanda": "aranya",
+        "sarga": "14",
+        "chapter": "14",
+        "title": "Sri Rama's Contact with Jatayu"
+    },
+    {
+        "id": "15",
+        "kanda": "aranya",
+        "sarga": "15",
+        "chapter": "15",
+        "title": "The Panchavati"
+    },
+    {
+        "id": "16",
+        "kanda": "aranya",
+        "sarga": "16",
+        "chapter": "16",
+        "title": "Lakshmana's description of vasanta season"
+    },
+    {
+        "id": "17",
+        "kanda": "aranya",
+        "sarga": "17",
+        "chapter": "17",
+        "title": "Surpanakha's entry into legend"
+    },
+    {
+        "id": "18",
+        "kanda": "aranya",
+        "sarga": "18",
+        "chapter": "18",
+        "title": "Lakshmana punishes Surpanakha"
+    },
+    {
+        "id": "19",
+        "kanda": "aranya",
+        "sarga": "19",
+        "chapter": "19",
+        "title": "Surpanakha's reporting to her brother Khara"
+    },
+    {
+        "id": "20",
+        "kanda": "aranya",
+        "sarga": "20",
+        "chapter": "20",
+        "title": "Rama eliminates Khara's demons"
+    },
+    {
+        "id": "21",
+        "kanda": "aranya",
+        "sarga": "21",
+        "chapter": "21",
+        "title": "Surpanakha reports demons death to Khara"
+    },
+    {
+        "id": "22",
+        "kanda": "aranya",
+        "sarga": "22",
+        "chapter": "22",
+        "title": "Khara's army marches to Rama."
+    },
+    {
+        "id": "23",
+        "kanda": "aranya",
+        "sarga": "23",
+        "chapter": "23",
+        "title": "Khara's army face bad-omens"
+    },
+    {
+        "id": "24",
+        "kanda": "aranya",
+        "sarga": "24",
+        "chapter": "24",
+        "title": "Rama's readiness to war with Khara"
+    },
+    {
+        "id": "25",
+        "kanda": "aranya",
+        "sarga": "25",
+        "chapter": "25",
+        "title": "Rama's war with Khara's demons"
+    },
+    {
+        "id": "26",
+        "kanda": "aranya",
+        "sarga": "26",
+        "chapter": "26",
+        "title": "Rama eliminates Dushana and his army"
+    },
+    {
+        "id": "27",
+        "kanda": "aranya",
+        "sarga": "27",
+        "chapter": "27",
+        "title": "Elimination of Trishira"
+    },
+    {
+        "id": "28",
+        "kanda": "aranya",
+        "sarga": "28",
+        "chapter": "28",
+        "title": "Khara's war with Rama"
+    },
+    {
+        "id": "29",
+        "kanda": "aranya",
+        "sarga": "29",
+        "chapter": "29",
+        "title": "Khara's fight with Rama"
+    },
+    {
+        "id": "30",
+        "kanda": "aranya",
+        "sarga": "30",
+        "chapter": "30",
+        "title": "Elimination of Khara"
+    },
+    {
+        "id": "31",
+        "kanda": "aranya",
+        "sarga": "31",
+        "chapter": "31",
+        "title": "Akampana's repot to Ravana"
+    },
+    {
+        "id": "32",
+        "kanda": "aranya",
+        "sarga": "32",
+        "chapter": "32",
+        "title": "Ravana's pomp and pride"
+    },
+    {
+        "id": "33",
+        "kanda": "aranya",
+        "sarga": "33",
+        "chapter": "33",
+        "title": "Shurpanakha accuses Ravana"
+    },
+    {
+        "id": "34",
+        "kanda": "aranya",
+        "sarga": "34",
+        "chapter": "34",
+        "title": "Surpanakha allures Ravana to marry Sita"
+    },
+    {
+        "id": "35",
+        "kanda": "aranya",
+        "sarga": "35",
+        "chapter": "35",
+        "title": "Ravana proceeds to Mareecha"
+    },
+    {
+        "id": "36",
+        "kanda": "aranya",
+        "sarga": "36",
+        "chapter": "36",
+        "title": "Ravana seeks Mareecha's help"
+    },
+    {
+        "id": "37",
+        "kanda": "aranya",
+        "sarga": "37",
+        "chapter": "37",
+        "title": "Maareecha's advise to Ravana"
+    },
+    {
+        "id": "38",
+        "kanda": "aranya",
+        "sarga": "38",
+        "chapter": "38",
+        "title": "Maareecha's good word to Ravana"
+    },
+    {
+        "id": "39",
+        "kanda": "aranya",
+        "sarga": "39",
+        "chapter": "39",
+        "title": "Maareecha further advises Ravana"
+    },
+    {
+        "id": "40",
+        "kanda": "aranya",
+        "sarga": "40",
+        "chapter": "40",
+        "title": "Ravana rebuts Maareecha"
+    },
+    {
+        "id": "41",
+        "kanda": "aranya",
+        "sarga": "41",
+        "chapter": "41",
+        "title": "Maareecha dissuades Ravana"
+    },
+    {
+        "id": "42",
+        "kanda": "aranya",
+        "sarga": "42",
+        "chapter": "42",
+        "title": "Maareecha turns into Golden Deer"
+    },
+    {
+        "id": "43",
+        "kanda": "aranya",
+        "sarga": "43",
+        "chapter": "43",
+        "title": "Lure of the Golden Deer"
+    },
+    {
+        "id": "44",
+        "kanda": "aranya",
+        "sarga": "44",
+        "chapter": "44",
+        "title": "Rama eliminates Maareecha"
+    },
+    {
+        "id": "45",
+        "kanda": "aranya",
+        "sarga": "45",
+        "chapter": "45",
+        "title": "Sita rebukes Lakshmana"
+    },
+    {
+        "id": "46",
+        "kanda": "aranya",
+        "sarga": "46",
+        "chapter": "46",
+        "title": "Ravana praises Sita's beauty"
+    },
+    {
+        "id": "47",
+        "kanda": "aranya",
+        "sarga": "47",
+        "chapter": "47",
+        "title": "The debate of Sita and Ravana is started,"
+    },
+    {
+        "id": "48",
+        "kanda": "aranya",
+        "sarga": "48",
+        "chapter": "48",
+        "title": "Ravana tempts Sita"
+    },
+    {
+        "id": "49",
+        "kanda": "aranya",
+        "sarga": "49",
+        "chapter": "49",
+        "title": "Sita's abduction takes place now"
+    },
+    {
+        "id": "50",
+        "kanda": "aranya",
+        "sarga": "50",
+        "chapter": "50",
+        "title": "Jataayu's confrontation with Ravana"
+    },
+    {
+        "id": "51",
+        "kanda": "aranya",
+        "sarga": "51",
+        "chapter": "51",
+        "title": "The combat of Jataayu and Ravana"
+    },
+    {
+        "id": "52",
+        "kanda": "aranya",
+        "sarga": "52",
+        "chapter": "52",
+        "title": "The combat of Jataayu and Ravana"
+    },
+    {
+        "id": "53",
+        "kanda": "aranya",
+        "sarga": "53",
+        "chapter": "53",
+        "title": "Sita denounces Ravana's misdeeds"
+    },
+    {
+        "id": "54",
+        "kanda": "aranya",
+        "sarga": "54",
+        "chapter": "54",
+        "title": "Sita drops jewellery at Sugreeva"
+    },
+    {
+        "id": "55",
+        "kanda": "aranya",
+        "sarga": "55",
+        "chapter": "55",
+        "title": "Ravana entices Sita to marry him"
+    },
+    {
+        "id": "56",
+        "kanda": "aranya",
+        "sarga": "56",
+        "chapter": "56",
+        "title": "Sita reprimands Ravana"
+    },
+    {
+        "id": "57",
+        "kanda": "aranya",
+        "sarga": "57",
+        "chapter": "57",
+        "title": "Rama meets Lakshmana"
+    },
+    {
+        "id": "58",
+        "kanda": "aranya",
+        "sarga": "58",
+        "chapter": "58",
+        "title": "Rama anguishes for Sita's aloneness"
+    },
+    {
+        "id": "59",
+        "kanda": "aranya",
+        "sarga": "59",
+        "chapter": "59",
+        "title": "Rama reprimands Lakshmana"
+    },
+    {
+        "id": "60",
+        "kanda": "aranya",
+        "sarga": "60",
+        "chapter": "60",
+        "title": "Rama laments for Sita's separation"
+    },
+    {
+        "id": "61",
+        "kanda": "aranya",
+        "sarga": "61",
+        "chapter": "61",
+        "title": "Rama laments for Sita [contd.]"
+    },
+    {
+        "id": "62",
+        "kanda": "aranya",
+        "sarga": "62",
+        "chapter": "62",
+        "title": "Rama laments for Sita [contd.]"
+    },
+    {
+        "id": "63",
+        "kanda": "aranya",
+        "sarga": "63",
+        "chapter": "63",
+        "title": "Rama laments for Sita [contd.]"
+    },
+    {
+        "id": "64",
+        "kanda": "aranya",
+        "sarga": "64",
+        "chapter": "64",
+        "title": "Rama finds Sita's flowers and jewelry"
+    },
+    {
+        "id": "65",
+        "kanda": "aranya",
+        "sarga": "65",
+        "chapter": "65",
+        "title": "Lakshmana pacifies Rama's fury"
+    },
+    {
+        "id": "66",
+        "kanda": "aranya",
+        "sarga": "66",
+        "chapter": "66",
+        "title": "Lakshmana's advisory words to Rama"
+    },
+    {
+        "id": "67",
+        "kanda": "aranya",
+        "sarga": "67",
+        "chapter": "67",
+        "title": "Rama spots wing clipped Jataayu."
+    },
+    {
+        "id": "68",
+        "kanda": "aranya",
+        "sarga": "68",
+        "chapter": "68",
+        "title": "Jataayu infoms about Ravana and dies."
+    },
+    {
+        "id": "69",
+        "kanda": "aranya",
+        "sarga": "69",
+        "chapter": "69",
+        "title": "Kabandha captures Rama, Lakshmana"
+    },
+    {
+        "id": "70",
+        "kanda": "aranya",
+        "sarga": "70",
+        "chapter": "70",
+        "title": "Kabandha's overlong arms are cut off"
+    },
+    {
+        "id": "71",
+        "kanda": "aranya",
+        "sarga": "71",
+        "chapter": "71",
+        "title": "Kabandha requestes for incineration"
+    },
+    {
+        "id": "72",
+        "kanda": "aranya",
+        "sarga": "72",
+        "chapter": "72",
+        "title": "Kabandha advises Rama to meet Sugreeva"
+    },
+    {
+        "id": "73",
+        "kanda": "aranya",
+        "sarga": "73",
+        "chapter": "73",
+        "title": "Kabandha extols Pampa Lake"
+    },
+    {
+        "id": "74",
+        "kanda": "aranya",
+        "sarga": "74",
+        "chapter": "74",
+        "title": "Shabari gets salvation"
+    },
+    {
+        "id": "75",
+        "kanda": "aranya",
+        "sarga": "75",
+        "chapter": "75",
+        "title": "Rama and Lakshmana arrive at Pampa Lake"
+    }
+]
