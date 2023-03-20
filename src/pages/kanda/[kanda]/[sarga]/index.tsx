@@ -1,14 +1,21 @@
 import { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next';
 
 import Stack from '@mui/joy/Stack';
-import Typography from '@mui/joy/Typography';
-import Commentary from 'components/Commentary';
 import { KANDAS } from 'constant/kanda';
-import { IChapters, TKanda } from 'interface/kanda';
+import { ISargaContent, TKanda } from 'interface/kanda';
 import { ParsedUrlQuery } from 'querystring';
-import { getChaptersOfKanda } from 'utils/ssg';
+import { getChapterOfKanda, getChaptersOfKanda } from 'utils/ssg';
+import HtmlTypography from 'components/HtmlTypography';
 
-type TSargaProps = {};
+type TSargaProps = {
+  id: string;
+  kanda: TKanda;
+  sarga: string;
+  title: string;
+  chapter: string;
+  overview: string;
+  content: ISargaContent[];
+};
 
 interface IParams extends ParsedUrlQuery {
   kanda: TKanda;
@@ -19,8 +26,6 @@ interface IPath {
   params: IParams;
 }
 
-// /[kanda]/[sarga]
-// /[kanda]/[sarga]
 export const getStaticPaths: GetStaticPaths<IParams> = async () => {
   let paths: IPath[] = [];
 
@@ -38,15 +43,18 @@ export const getStaticPaths: GetStaticPaths<IParams> = async () => {
 export const getStaticProps: GetStaticProps<TSargaProps, IParams> = async ({ params }) => {
   const { kanda, sarga } = params as IParams;
 
+  const data = getChapterOfKanda({ kanda, sarga });
+
   return {
-    props: {},
+    props: { ...data },
   };
 };
 
-const Sarga = ({}: TSargaProps) => {
+const Sarga = (props: TSargaProps) => {
+  const { id, kanda, sarga, title, chapter, overview, content } = props;
   return (
     <Stack>
-      <Typography level="h4">hello</Typography>
+      <HtmlTypography level="body1">{overview}</HtmlTypography>
     </Stack>
   );
 };
