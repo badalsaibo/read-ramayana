@@ -1,11 +1,8 @@
 import { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next';
-import { serialize } from 'next-mdx-remote/serialize';
-import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 import Stack from '@mui/joy/Stack';
 import Typography from '@mui/joy/Typography';
 import Commentary from 'components/Commentary';
-import Markdown from 'components/Markdown';
 import { KANDAS } from 'constant/kanda';
 import { IChapters, TKanda } from 'interface/kanda';
 import { ParsedUrlQuery } from 'querystring';
@@ -46,15 +43,10 @@ export const getStaticProps: GetStaticProps<TSargaProps, IParams> = async ({ par
   };
 };
 
-const Sarga = ({ frontMatter, source }: TSargaProps) => {
-  console.log({ frontMatter, source });
-  const { title } = frontMatter;
+const Sarga = ({}: TSargaProps) => {
   return (
     <Stack>
-      <Typography level="h1" fontSize="2.5rem">
-        {title}
-      </Typography>
-      <Markdown {...source} />
+      <Typography level="h4">hello</Typography>
     </Stack>
   );
 };
