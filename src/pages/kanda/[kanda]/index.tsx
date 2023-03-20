@@ -1,9 +1,11 @@
 import { Divider, Stack, Typography } from '@mui/joy';
+import { KANDAS } from 'constant/kanda';
+import { IChapterMetadata, TKanda } from 'interface/kanda';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
-import { IChapterMetadata, TKanda } from 'pages/kanda/interface';
+import { getChaptersOfKanda } from 'utils/ssg';
 // import { getAllChaptersOfKanda, getAllKandas } from '../utils/ssg';
 
 interface Params extends ParsedUrlQuery {
@@ -41,10 +43,8 @@ const Kanda = ({ chapters }: TKandaProps) => {
 export default Kanda;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const allKandas = getAllKandas();
-
   return {
-    paths: allKandas.map((kanda) => ({ params: { kanda } })),
+    paths: KANDAS.map(({ kanda }) => ({ params: { kanda } })),
     fallback: false,
   };
 };
@@ -52,7 +52,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   const { kanda } = context.params as Params;
 
-  const chapters = getAllChaptersOfKanda(kanda);
+  const chapters = getChaptersOfKanda(kanda);
 
   return {
     props: {

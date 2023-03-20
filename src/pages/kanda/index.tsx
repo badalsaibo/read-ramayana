@@ -6,15 +6,7 @@ import Typography from '@mui/joy/Typography';
 
 import Breadcrumbs from 'components/Breadcrumbs';
 import PaddedButton from 'components/PaddedButton';
-
-const KANDAS = [
-  { kanda: 'bala', url: '/bala' },
-  { kanda: 'ayodhya', url: '/ayodhya' },
-  { kanda: 'aranya', url: '/aranya' },
-  { kanda: 'kishkindha', url: '/kishkindha' },
-  { kanda: 'sundara', url: '/sundara' },
-  { kanda: 'yuddha', url: '/yuddha' },
-];
+import { KANDAS } from 'constant/kanda';
 
 const BREADCRUMBS = [
   { text: 'home', url: '/' },
