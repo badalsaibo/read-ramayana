@@ -1,5 +1,6 @@
+import { IKandas } from "interface/kanda";
 
-export const KANDAS = [
+export const KANDAS: IKandas[] = [
     { kanda: 'bala', url: '/bala' },
     { kanda: 'ayodhya', url: '/ayodhya' },
     { kanda: 'aranya', url: '/aranya' },

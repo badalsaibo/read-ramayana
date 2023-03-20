@@ -1,9 +1,15 @@
 export type TKanda = 'bala' | 'ayodhya' | 'aranya' | 'kishkindha' | 'sundara' | 'yuddha';
 
-export interface IChapterMetadata {
-  slug: string;
-  id: string;
-  sarga: string;
-  kanda: string;
-  title: string;
+export interface IChapters {
+    id: string;
+    kanda: string;
+    sarga: string;
+    chapter: string;
+    title: string;
+}
+
+
+export interface IKandas  {
+    kanda: TKanda;
+    url: string;
 }

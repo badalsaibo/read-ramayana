@@ -1,6 +1,6 @@
 import { Divider, Stack, Typography } from '@mui/joy';
 import { KANDAS } from 'constant/kanda';
-import { IChapterMetadata, TKanda } from 'interface/kanda';
+import { IChapters, TKanda } from 'interface/kanda';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -13,7 +13,7 @@ interface Params extends ParsedUrlQuery {
 }
 
 type TKandaProps = {
-  chapters: IChapterMetadata[];
+  chapters: IChapters[];
 };
 
 const Kanda = ({ chapters }: TKandaProps) => {
@@ -24,11 +24,11 @@ const Kanda = ({ chapters }: TKandaProps) => {
       <Typography level="h1">Chapters</Typography>
       <Divider />
       <Stack spacing={1} sx={{ mt: 1 }}>
-        {chapters.map(({ id, title, sarga, slug }) => (
+        {chapters.map(({ id, title, sarga }) => (
           <Typography
             key={id}
             component={Link}
-            href={`/kanda/${kanda}/${slug}`}
+            href={`/kanda/${kanda}/${sarga}`}
             sx={{ textDecoration: 'none' }}
             fontFamily="var(--joy-fontFamily-display)"
           >
