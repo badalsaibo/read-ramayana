@@ -19,8 +19,14 @@ const joyTypesToHtmlTags = {
   display2: 'h2',
 };
 
-const HtmlTypography = ({ children, level = 'body1' }: { children: string; level?: keyof TypographySystem }) => {
-  const htmlTag = joyTypesToHtmlTags[level] as keyof HTMLElementTagNameMap;
+type THtmlTypographyProps = {
+  children: string;
+  level?: keyof TypographySystem;
+  component?: keyof HTMLElementTagNameMap;
+};
+
+const HtmlTypography = ({ children, level = 'body1', component }: THtmlTypographyProps) => {
+  const htmlTag = component ? component : (joyTypesToHtmlTags[level] as keyof HTMLElementTagNameMap);
   const ChildrenTypography = styled(htmlTag, { shouldForwardProp: (prop) => prop !== 'level' })<{
     level: keyof TypographySystem;
   }>(({ theme, level }) => ({

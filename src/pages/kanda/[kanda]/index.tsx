@@ -25,13 +25,7 @@ const Kanda = ({ chapters }: TKandaProps) => {
       <Divider />
       <Stack spacing={1} sx={{ mt: 1 }}>
         {chapters.map(({ id, title, sarga }) => (
-          <Typography
-            key={id}
-            component={Link}
-            href={`/kanda/${kanda}/${sarga}`}
-            sx={{ textDecoration: 'none' }}
-            fontFamily="var(--joy-fontFamily-display)"
-          >
+          <Typography key={id} component={Link} href={`/kanda/${kanda}/${sarga}`} sx={{ textDecoration: 'none' }}>
             {sarga}.&nbsp;{title}
           </Typography>
         ))}

@@ -13,7 +13,8 @@ export interface IKandas {
   url: string;
 }
 
-export interface ISargaContent {
-  type: 'verse' | 'commentary' | 'conceptual' | 'sanskrit';
+export type SargaContentType = 'verse' | 'commentary' | 'conceptual' | 'sanskrit'
+export interface SargaContent {
+  type: SargaContentType;
   text: string;
 }

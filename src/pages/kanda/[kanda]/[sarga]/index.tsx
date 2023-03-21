@@ -2,10 +2,13 @@ import { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next';
 
 import Stack from '@mui/joy/Stack';
 import { KANDAS } from 'constant/kanda';
-import { ISargaContent, TKanda } from 'interface/kanda';
+import { SargaContent, TKanda } from 'interface/kanda';
 import { ParsedUrlQuery } from 'querystring';
 import { getChapterOfKanda, getChaptersOfKanda } from 'utils/ssg';
 import HtmlTypography from 'components/HtmlTypography';
+import ArrowHr from 'components/ArrowHr';
+import RenderContent from 'components/RenderContent';
+import { Divider } from '@mui/joy';
 
 type TSargaProps = {
   id: string;
@@ -14,7 +17,7 @@ type TSargaProps = {
   title: string;
   chapter: string;
   overview: string;
-  content: ISargaContent[];
+  content: SargaContent[];
 };
 
 interface IParams extends ParsedUrlQuery {
@@ -54,7 +57,17 @@ const Sarga = (props: TSargaProps) => {
   const { id, kanda, sarga, title, chapter, overview, content } = props;
   return (
     <Stack>
-      <HtmlTypography level="body1">{overview}</HtmlTypography>
+      <HtmlTypography level="h2" component="h1">
+        {title}
+      </HtmlTypography>
+      <Divider />
+      <HtmlTypography>{overview}</HtmlTypography>
+      <Divider />
+      <Stack>
+        {content.map((props, idx) => (
+          <RenderContent {...props} key={idx} />
+        ))}
+      </Stack>
     </Stack>
   );
 };
