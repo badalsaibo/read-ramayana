@@ -1,4 +1,4 @@
-import { Divider, Stack, Typography } from '@mui/joy';
+import { Button, Divider, Grid, Stack, Typography } from '@mui/joy';
 import { KANDAS } from 'constant/kanda';
 import { IChapters, TKanda } from 'interface/kanda';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -20,9 +20,24 @@ const Kanda = ({ chapters }: TKandaProps) => {
   const router = useRouter();
   const { kanda } = router.query;
   return (
-    <Stack>
+    <Stack spacing={2}>
       <Typography level="h1">Chapters</Typography>
       <Divider />
+
+      <Stack>
+        <Grid container spacing={1}>
+          {chapters.map(({ id, title, sarga }) => (
+            <Grid xs={2} key={id}>
+              <Button variant="soft" fullWidth component={Link} href={`/kanda/${kanda}/${sarga}`}>
+                {sarga}
+              </Button>
+            </Grid>
+          ))}
+        </Grid>
+      </Stack>
+
+      <Divider />
+
       <Stack spacing={1} sx={{ mt: 1 }}>
         {chapters.map(({ id, title, sarga }) => (
           <Typography key={id} component={Link} href={`/kanda/${kanda}/${sarga}`} sx={{ textDecoration: 'none' }}>
