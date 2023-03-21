@@ -3,6 +3,7 @@ import JoyBreadcrumbs from '@mui/joy/Breadcrumbs';
 import ChevronRightCircle from 'icons/ChevronRightCircle';
 import JoyLink from '@mui/joy/Link';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 interface IBreadcrumbsData {
   text: string;
@@ -17,11 +18,22 @@ const StyledBreadcrumbs = styled(JoyBreadcrumbs)(() => ({
   padding: 0,
 }));
 
-const Breadcrumbs = ({ data }: TBreadcrumbsProps) => {
+const Breadcrumbs = () => {
   const theme = useTheme();
+
+  const router = useRouter();
+  const linkPath = router.asPath.split('/');
+  linkPath.shift();
+
+  const pathArray = linkPath.map((path, i) => {
+    return { text: path, url: '/' + linkPath.slice(0, i + 1).join('/') };
+  });
+
+  const breadcrumbs = [{ text: 'home', url: '/' }, ...pathArray];
+
   return (
     <StyledBreadcrumbs separator={<ChevronRightCircle size={14} color={theme.vars.palette.neutral[500]} />}>
-      {data.map(({ text, url }) => (
+      {breadcrumbs.map(({ text, url }) => (
         <JoyLink component={Link} key={text} href={url} underline="hover" color="neutral">
           {text}
         </JoyLink>

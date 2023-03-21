@@ -8,15 +8,10 @@ import Breadcrumbs from 'components/Breadcrumbs';
 import PaddedButton from 'components/PaddedButton';
 import { KANDAS } from 'constant/kanda';
 
-const BREADCRUMBS = [
-  { text: 'home', url: '/' },
-  { text: 'kandas', url: '/kanda' },
-];
-
 const Kanda = () => {
   return (
     <Stack spacing={1}>
-      <Breadcrumbs data={BREADCRUMBS} />
+      <Breadcrumbs />
       <Typography level="h1">Kandas</Typography>
       <Divider sx={{ mb: 1 }} />
       <Box>
