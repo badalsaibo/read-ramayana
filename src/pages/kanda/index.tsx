@@ -11,7 +11,6 @@ import { KANDAS } from 'constant/kanda';
 const Kanda = () => {
   return (
     <Stack spacing={1}>
-      <Breadcrumbs />
       <Typography level="h1">Kandas</Typography>
       <Divider sx={{ mb: 1 }} />
       <Box>

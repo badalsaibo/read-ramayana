@@ -1,4 +1,5 @@
 import { Box, styled } from '@mui/joy';
+import Breadcrumbs from 'components/Breadcrumbs';
 
 type TLayoutProps = {
   children: React.ReactNode;
@@ -9,7 +10,12 @@ const Container = styled(Box)(({ theme }) => ({
 }));
 
 const Layout = ({ children }: TLayoutProps) => {
-  return <Container>{children}</Container>;
+  return (
+    <Container>
+      <Breadcrumbs />
+      {children}
+    </Container>
+  );
 };
 
 export default Layout;

@@ -20,10 +20,10 @@ const globalStyles = (
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <CssVarsProvider theme={extendTheme(themeConfig)} defaultMode="system">
-      <CssBaseline />
       {globalStyles}
       <HydrationResolver>
         <Layout>
+          <CssBaseline />
           <Component {...pageProps} />
         </Layout>
       </HydrationResolver>
