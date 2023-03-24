@@ -1,6 +1,6 @@
-import { TSvgProps } from './interface';
+import { SvgProps } from './interface';
 
-const ChevronRightCircle = ({ size = 24, color }: TSvgProps) => {
+const ChevronRightCircle = ({ size = 24, color }: SvgProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

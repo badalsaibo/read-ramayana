@@ -1,19 +1,22 @@
-import { Box, styled } from '@mui/joy';
+import { Box, Stack, styled } from '@mui/joy';
 import Breadcrumbs from 'components/Breadcrumbs';
+import Sidebar from 'components/Sidebar';
 
 type TLayoutProps = {
   children: React.ReactNode;
 };
 
-const Container = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(2),
+const Container = styled(Stack)(({ theme }) => ({
+  // padding: theme.spacing(2),
+  height: '100%',
 }));
 
 const Layout = ({ children }: TLayoutProps) => {
   return (
-    <Container>
-      <Breadcrumbs />
-      {children}
+    <Container direction="row">
+      <Sidebar />
+      {/* <Breadcrumbs /> */}
+      <Box>{children}</Box>
     </Container>
   );
 };

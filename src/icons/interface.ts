@@ -1,4 +1,4 @@
-export type TSvgProps = {
+export type SvgProps = {
   size?: number;
   color?: string;
 };

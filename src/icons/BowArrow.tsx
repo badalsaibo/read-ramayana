@@ -1,6 +1,6 @@
-import { TSvgProps } from './interface';
+import { SvgProps } from './interface';
 
-const BowArrow = ({ size = 24, color }: TSvgProps) => {
+const BowArrow = ({ size = 24, color }: SvgProps) => {
   return (
     <svg width="24" height="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlSpace="preserve">
       <path fill="#ffb912" d="m117.624 493.578.001-99.204H18.423l84.785-84.786h99.202l.001 99.204z" />
