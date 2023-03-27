@@ -2,8 +2,8 @@ import { TKanda } from 'interface/kanda';
 import { createContext, useMemo, useState } from 'react';
 
 type KandaContextProps = {
-  kanda: TKanda | null;
-  setKanda: React.Dispatch<React.SetStateAction<TKanda | null>>;
+  kanda: TKanda;
+  setKanda: React.Dispatch<React.SetStateAction<TKanda>>;
 };
 
 const KandaContext = createContext<KandaContextProps | null>(null);
@@ -13,7 +13,7 @@ type KandaProviderProps = {
 };
 
 const KandaProvider = ({ children }: KandaProviderProps) => {
-  const [kanda, setKanda] = useState<TKanda | null>(null);
+  const [kanda, setKanda] = useState<TKanda>('bala');
 
   const state = useMemo(
     () => ({

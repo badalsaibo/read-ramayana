@@ -1,22 +1,25 @@
 import { List, ListItem, ListItemButton, Sheet, Stack, Typography } from '@mui/joy';
-import { KANDAS } from 'constant/kanda';
 import useKanda from 'hooks/provider/useKanda';
 import Link from 'next/link';
-import { getChaptersOfKanda } from 'utils/ssg';
+import All_CHAPTERS from './all-chapters.json';
 
 const ChaptersSidebar = () => {
   const { kanda } = useKanda();
 
-  const chapters = getChaptersOfKanda();
+  console.log({ All_CHAPTERS });
+
+  const chapters = All_CHAPTERS[kanda];
+
+  console.log(chapters);
 
   return (
     <Stack component={Sheet} variant="outlined">
       <List>
-        {chapters.map(({ kanda, url }) => (
-          <ListItem key={url}>
-            <ListItemButton component={Link} href={`/kanda/${url}`}>
+        {chapters.map(({ kanda, chapter, title }) => (
+          <ListItem key={kanda + chapter}>
+            <ListItemButton component={Link} href={`/kanda/${kanda}/${chapter}`}>
               <Typography textTransform="capitalize" sx={{ fontFamily: 'var(--joy-fontFamily-display)' }}>
-                {kanda}
+                {title}
               </Typography>
             </ListItemButton>
           </ListItem>
