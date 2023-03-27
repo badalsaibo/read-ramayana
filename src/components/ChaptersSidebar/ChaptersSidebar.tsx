@@ -1,4 +1,5 @@
-import { List, ListItem, ListItemButton, Sheet, Stack, styled, Typography } from '@mui/joy';
+import { Box, List, ListItem, ListItemButton, Sheet, Stack, styled, Typography } from '@mui/joy';
+import ScrollArea from 'components/ScrollArea';
 import useKanda from 'hooks/provider/useKanda';
 import Link from 'next/link';
 import All_CHAPTERS from './all-chapters.json';
@@ -11,19 +12,21 @@ const ChaptersSidebar = () => {
   const chapters = All_CHAPTERS[kanda];
 
   return (
-    <Stack>
-      <List>
-        {chapters.map(({ kanda, chapter, title }) => (
-          <ListItem key={kanda + chapter}>
-            <ListItemButton component={Link} href={`/kanda/${kanda}/${chapter}`}>
-              <Typography textTransform="capitalize" sx={{ fontFamily: 'var(--joy-fontFamily-display)' }}>
-                {title}
-              </Typography>
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Stack>
+    <ScrollArea>
+      <Stack sx={{ height: '100%' }}>
+        <List>
+          {chapters.map(({ kanda, chapter, title }) => (
+            <ListItem key={kanda + chapter}>
+              <ListItemButton component={Link} href={`/kanda/${kanda}/${chapter}`}>
+                <Typography textTransform="capitalize" sx={{ fontFamily: 'var(--joy-fontFamily-display)' }}>
+                  {title}
+                </Typography>
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Stack>
+    </ScrollArea>
   );
 };
 
