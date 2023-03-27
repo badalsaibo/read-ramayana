@@ -9,7 +9,6 @@ type TLayoutProps = {
 };
 
 const Container = styled(Stack)(({ theme }) => ({
-  // padding: theme.spacing(2),
   height: '100%',
 }));
 
@@ -20,7 +19,6 @@ const Layout = ({ children }: TLayoutProps) => {
         <Sidebar />
         <ChaptersSidebar />
       </KandaProvider>
-      {/* <Breadcrumbs /> */}
       <Box>{children}</Box>
     </Container>
   );

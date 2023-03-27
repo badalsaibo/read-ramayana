@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemButton, Sheet, Stack, Typography } from '@mui/joy';
+import { List, ListItem, ListItemButton, Sheet, Stack, styled, Typography } from '@mui/joy';
 import useKanda from 'hooks/provider/useKanda';
 import Link from 'next/link';
 import All_CHAPTERS from './all-chapters.json';
@@ -10,10 +10,8 @@ const ChaptersSidebar = () => {
 
   const chapters = All_CHAPTERS[kanda];
 
-  console.log(chapters);
-
   return (
-    <Stack component={Sheet} variant="outlined">
+    <Stack>
       <List>
         {chapters.map(({ kanda, chapter, title }) => (
           <ListItem key={kanda + chapter}>
@@ -30,3 +28,5 @@ const ChaptersSidebar = () => {
 };
 
 export default ChaptersSidebar;
+
+const StyledStack = styled(Stack)(() => ({}));

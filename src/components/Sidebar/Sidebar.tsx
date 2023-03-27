@@ -8,24 +8,30 @@ import { CgTrees } from 'react-icons/cg';
 import { MdOutlineTempleHindu, MdOutlineHandshake } from 'react-icons/md';
 import { TbSwords, TbBow } from 'react-icons/tb';
 
+const SIZE = '20px';
+
 const IconsMap = {
-  bala: <TbBow />,
-  ayodhya: <MdOutlineTempleHindu />,
-  aranya: <CgTrees />,
-  kishkindha: <MdOutlineHandshake />,
-  sundara: <Hanuman />,
-  yuddha: <TbSwords />,
+  bala: <TbBow size={SIZE} />,
+  ayodhya: <MdOutlineTempleHindu size={SIZE} />,
+  aranya: <CgTrees size={SIZE} />,
+  kishkindha: <MdOutlineHandshake size={SIZE} />,
+  sundara: <Hanuman size={SIZE} />,
+  yuddha: <TbSwords size={SIZE} />,
 };
 
 const Sidebar = () => {
   return (
-    <Stack component={Sheet} variant="outlined">
+    <Stack>
       <List>
         {KANDAS.map(({ kanda, url }) => (
           <ListItem key={url}>
             <ListItemButton component={Link} href={`/kanda/${url}`}>
               <ListItemDecorator>{IconsMap[kanda]}</ListItemDecorator>
-              <Typography textTransform="capitalize" sx={{ fontFamily: 'var(--joy-fontFamily-display)' }}>
+              <Typography
+                textTransform="capitalize"
+                fontWeight={400}
+                sx={{ fontFamily: 'var(--joy-fontFamily-display)' }}
+              >
                 {kanda}
               </Typography>
             </ListItemButton>
