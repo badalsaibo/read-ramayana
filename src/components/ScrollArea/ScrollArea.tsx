@@ -12,6 +12,7 @@ const ScrollArea = ({ children }: { children: React.ReactNode }) => {
       style={{
         overflow: 'hidden',
         position: 'relative',
+        height: '100%',
       }}
     >
       <ScrollAreaPrimitive.Viewport style={{ height: '100%', width: '100%' }}>{children}</ScrollAreaPrimitive.Viewport>

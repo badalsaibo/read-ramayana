@@ -8,13 +8,15 @@ type TLayoutProps = {
   children: React.ReactNode;
 };
 
-const Container = styled(Stack)(({ theme }) => ({
+const Container = styled(Box)(() => ({
   height: '100%',
+  display: 'grid',
+  gridTemplateColumns: 'min-content 0.75fr 1fr',
 }));
 
 const Layout = ({ children }: TLayoutProps) => {
   return (
-    <Container direction="row">
+    <Container>
       <KandaProvider>
         <Sidebar />
         <ChaptersSidebar />

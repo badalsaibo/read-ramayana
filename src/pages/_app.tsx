@@ -9,11 +9,13 @@ import HydrationResolver from 'components/HydrationResolver';
 
 const globalStyles = (
   <GlobalStyles
-    styles={{
-      'html, body, div#__next': {
-        height: '100%',
-      },
-    }}
+    styles={
+      {
+        // 'html, body, div#__next': {
+        //   height: '100%',
+        // },
+      }
+    }
   />
 );
 
