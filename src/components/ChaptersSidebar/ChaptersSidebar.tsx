@@ -10,7 +10,8 @@ const ChaptersSidebar = () => {
   const chapters = All_CHAPTERS[kanda];
 
   return (
-    <div style={{ position: 'sticky', height: '100vh', border: '1px solid red', top: '10px', left: '0px' }}>
+    <Stack>
+      <Typography level="h1">Chapters</Typography>
       <ScrollArea>
         <Stack sx={{ height: '100%', p: 1 }}>
           <List sx={{ '--ListItem-radius': '8px', '--List-gap': '8px' }}>
@@ -27,7 +28,7 @@ const ChaptersSidebar = () => {
           </List>
         </Stack>
       </ScrollArea>
-    </div>
+    </Stack>
   );
 };
 

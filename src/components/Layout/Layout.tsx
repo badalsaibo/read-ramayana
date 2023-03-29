@@ -12,6 +12,7 @@ const Container = styled(Box)(() => ({
   height: '100%',
   display: 'grid',
   gridTemplateColumns: 'min-content 0.75fr 1fr',
+  gridTemplateRows: '100%',
 }));
 
 const Layout = ({ children }: TLayoutProps) => {
@@ -21,7 +22,7 @@ const Layout = ({ children }: TLayoutProps) => {
         <Sidebar />
         <ChaptersSidebar />
       </KandaProvider>
-      <Box>{children}</Box>
+      <Box sx={{ px: 2 }}>{children}</Box>
     </Container>
   );
 };

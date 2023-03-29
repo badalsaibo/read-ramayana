@@ -8,7 +8,7 @@ import { getChapterOfKanda, getChaptersOfKanda } from 'utils/ssg';
 import HtmlTypography from 'components/HtmlTypography';
 import ArrowHr from 'components/ArrowHr';
 import RenderContent from 'components/RenderContent';
-import { Divider } from '@mui/joy';
+import { Box, Divider, Sheet, styled } from '@mui/joy';
 
 type TSargaProps = {
   id: string;
@@ -56,20 +56,28 @@ export const getStaticProps: GetStaticProps<TSargaProps, IParams> = async ({ par
 const Sarga = (props: TSargaProps) => {
   const { id, kanda, sarga, title, chapter, overview, content } = props;
   return (
-    <Stack>
+    <Container>
       <HtmlTypography level="h2" component="h1">
         {title}
       </HtmlTypography>
-      <Divider />
-      <HtmlTypography>{overview}</HtmlTypography>
-      <Divider />
-      <Stack>
-        {content.map((props, idx) => (
-          <RenderContent {...props} key={idx} />
-        ))}
+      <Stack sx={{ flexGrow: 1, overflowY: 'auto' }}>
+        <Divider />
+        <HtmlTypography>{overview}</HtmlTypography>
+        <Divider />
+        <Stack>
+          {content.map((props, idx) => (
+            <RenderContent {...props} key={idx} />
+          ))}
+        </Stack>
       </Stack>
-    </Stack>
+    </Container>
   );
 };
 
 export default Sarga;
+
+const Container = styled(Stack)(({ theme }) => ({
+  height: '100%',
+  paddingLeft: theme.spacing(2),
+  paddingRight: theme.spacing(2),
+}));
