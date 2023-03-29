@@ -9,9 +9,10 @@ import { CgPlayTrackPrevR, CgPlayTrackNextR } from 'react-icons/cg';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Sheet, styled, useTheme, SheetProps } from '@mui/joy';
+import { TbBow } from 'react-icons/tb';
 import type { StackProps } from '@mui/system';
 
-const NavigationBar = () => {
+const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
   const theme = useTheme();
   const router = useRouter();
 
@@ -29,19 +30,27 @@ const NavigationBar = () => {
         <IoChevronBack size={24} />
       </IconButton>
 
-      <IconButton variant="outlined" component={Link} href="/">
-        <CgPlayTrackPrevR size={24} />
-      </IconButton>
-      <IconButton variant="outlined" component={Link} href="/">
-        <CgPlayTrackNextR size={24} />
-      </IconButton>
+      {isSarga && (
+        <>
+          <IconButton variant="outlined" component={Link} href="/">
+            <CgPlayTrackPrevR size={24} />
+          </IconButton>
+          <IconButton variant="outlined" component={Link} href="/">
+            <CgPlayTrackNextR size={24} />
+          </IconButton>
+        </>
+      )}
 
-      <IconButton variant="outlined" component={Link} href="/">
+      <IconButton variant="outlined" component={Link} href="/kanda">
         <TbLayoutGrid size={24} />
       </IconButton>
 
-      <IconButton variant="outlined" component={Link} href="/kanda">
+      <IconButton variant="outlined">
         <HiOutlineBookOpen size={24} />
+      </IconButton>
+
+      <IconButton variant="outlined" component={Link} href="/kanda">
+        <TbBow size={24} transform="rotate(-45)" />
       </IconButton>
     </Container>
   );

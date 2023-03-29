@@ -8,7 +8,11 @@ import { getChapterOfKanda, getChaptersOfKanda } from 'utils/ssg';
 import HtmlTypography from 'components/HtmlTypography';
 import ArrowHr from 'components/ArrowHr';
 import RenderContent from 'components/RenderContent';
-import { Box, Divider, Sheet, styled } from '@mui/joy';
+import { Box, Button, Chip, Divider, Sheet, styled, Typography } from '@mui/joy';
+import { TbLayoutGrid } from 'react-icons/tb';
+import { HiOutlineBookOpen } from 'react-icons/hi';
+import Breadcrumbs from 'components/Breadcrumbs';
+import Link from 'next/link';
 
 type TSargaProps = {
   id: string;
@@ -54,13 +58,20 @@ export const getStaticProps: GetStaticProps<TSargaProps, IParams> = async ({ par
 };
 
 const Sarga = (props: TSargaProps) => {
-  const { id, kanda, sarga, title, chapter, overview, content } = props;
+  const { title, overview, content, kanda, sarga } = props;
+
+  const prevHref = `/kanda/${kanda}/${Number(sarga) - 1}`;
+  const nextHref = `/kanda/${kanda}/${Number(sarga) + 1}`;
+
+  const renderPrevButton = Number(sarga) > 1;
+
   return (
     <Container>
+      <Breadcrumbs />
       <HtmlTypography level="h2" component="h1">
         {title}
       </HtmlTypography>
-      <Stack sx={{ flexGrow: 1, overflowY: 'auto' }}>
+      <Stack>
         <Divider />
         <HtmlTypography>{overview}</HtmlTypography>
         <Divider />
@@ -69,11 +80,28 @@ const Sarga = (props: TSargaProps) => {
             <RenderContent {...props} key={idx} />
           ))}
         </Stack>
+        <Stack direction="row" gap={2}>
+          {renderPrevButton && (
+            <Stack sx={{ flex: 1 }}>
+              <Button size="lg" sx={{ py: 3 }} variant="outlined" component={Link} href={prevHref} color="neutral">
+                Prev
+              </Button>
+            </Stack>
+          )}
+
+          <Stack sx={{ flex: 1 }}>
+            <Button size="lg" sx={{ py: 3 }} variant="outlined" component={Link} href={nextHref} color="neutral">
+              Next
+            </Button>
+          </Stack>
+        </Stack>
       </Stack>
     </Container>
   );
 };
 
 export default Sarga;
+
+Sarga.isSarga = true;
 
 const Container = styled(Stack)(() => ({}));
