@@ -1,10 +1,12 @@
 import { Button, styled, Typography } from '@mui/joy';
+import { TKanda } from 'interface/kanda';
 import Link from 'next/link';
 import React from 'react';
 
 type TPadButtonProps = {
   children: React.ReactNode;
   href: string;
+  kanda: TKanda;
 };
 
 type TTypography = {
@@ -14,13 +16,15 @@ type TTypography = {
 type TStyledButtonProps = {
   component: React.ElementType;
   href: string;
+  kanda: TKanda;
 };
 
-const StyledButton = styled(Button)<TStyledButtonProps>(({ theme }) => ({
+const StyledButton = styled(Button)<TStyledButtonProps>(({ theme, kanda }) => ({
   width: '100%',
   textTransform: 'capitalize',
   justifyContent: 'flex-start',
   padding: `${theme.spacing(4)} ${theme.spacing(2)}`,
+  backgroundImage: '',
 }));
 
 const Text = styled(Typography)<TTypography>(({ theme }) => ({
@@ -29,9 +33,9 @@ const Text = styled(Typography)<TTypography>(({ theme }) => ({
   fontWeight: '700',
 }));
 
-const PaddedButton = ({ children, href }: TPadButtonProps) => {
+const PaddedButton = ({ children, href, kanda }: TPadButtonProps) => {
   return (
-    <StyledButton variant="soft" component={Link} href={href}>
+    <StyledButton variant="soft" component={Link} href={href} kanda={kanda}>
       <Text level="h1" component="p">
         {children}
       </Text>

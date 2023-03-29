@@ -4,24 +4,8 @@ import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
 import ListItemButton from '@mui/joy/ListItemButton';
 import ListItemDecorator from '@mui/joy/ListItemDecorator';
-import { KANDAS } from 'constant/kanda';
+import { KANDAS, KANDA_ICONS_MAP } from 'constant/kanda';
 import useKanda from 'hooks/provider/useKanda';
-import Hanuman from 'icons/Hanuman';
-
-import { CgTrees } from 'react-icons/cg';
-import { MdOutlineTempleHindu, MdOutlineHandshake } from 'react-icons/md';
-import { TbSwords, TbBow } from 'react-icons/tb';
-
-const SIZE = '20px';
-
-const IconsMap = {
-  bala: <TbBow size={SIZE} />,
-  ayodhya: <MdOutlineTempleHindu size={SIZE} />,
-  aranya: <CgTrees size={SIZE} />,
-  kishkindha: <MdOutlineHandshake size={SIZE} />,
-  sundara: <Hanuman size={SIZE} />,
-  yuddha: <TbSwords size={SIZE} />,
-};
 
 const Sidebar = () => {
   const { kanda: kandaRoot, setKanda } = useKanda();
@@ -36,7 +20,7 @@ const Sidebar = () => {
               onClick={() => setKanda(kanda)}
               color="primary"
             >
-              <ListItemDecorator sx={{ color: 'inherit' }}>{IconsMap[kanda]}</ListItemDecorator>
+              <ListItemDecorator sx={{ color: 'inherit' }}>{KANDA_ICONS_MAP[kanda]}</ListItemDecorator>
               <Typography
                 textTransform="capitalize"
                 fontWeight={400}

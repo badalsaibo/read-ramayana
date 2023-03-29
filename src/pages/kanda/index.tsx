@@ -17,7 +17,9 @@ const Kanda = () => {
         <Grid container spacing={2}>
           {KANDAS.map(({ kanda, url }) => (
             <Grid key={kanda} xs={6}>
-              <PaddedButton href={`/kanda${url}`}>{kanda}</PaddedButton>
+              <PaddedButton href={`/kanda${url}`} kanda={kanda}>
+                {kanda}
+              </PaddedButton>
             </Grid>
           ))}
         </Grid>
