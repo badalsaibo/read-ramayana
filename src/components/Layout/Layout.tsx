@@ -1,28 +1,26 @@
-import { Box, Stack, styled } from '@mui/joy';
+import { styled } from '@mui/joy';
+import Stack from '@mui/joy/Stack';
 import Breadcrumbs from 'components/Breadcrumbs';
-import ChaptersSidebar from 'components/ChaptersSidebar';
-import Sidebar from 'components/Sidebar';
-import KandaProvider from 'provider/KandaProvider';
+import { useRouter } from 'next/router';
 
 type TLayoutProps = {
   children: React.ReactNode;
 };
 
-const Container = styled(Box)(() => ({
+const Container = styled(Stack)(({ theme }) => ({
+  flexGrow: 1,
   height: '100%',
-  display: 'grid',
-  gridTemplateColumns: 'min-content 0.75fr 1fr',
-  gridTemplateRows: '100%',
+  padding: theme.spacing(2),
 }));
 
 const Layout = ({ children }: TLayoutProps) => {
+  const router = useRouter();
+
+  const isRootRoute = router.asPath === '/';
   return (
     <Container>
-      <KandaProvider>
-        <Sidebar />
-        <ChaptersSidebar />
-      </KandaProvider>
-      <Box sx={{ px: 2 }}>{children}</Box>
+      {!isRootRoute && <Breadcrumbs />}
+      {children}
     </Container>
   );
 };

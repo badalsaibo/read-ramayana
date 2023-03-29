@@ -13,9 +13,6 @@ const globalStyles = (
       'html, body, div#__next': {
         height: '100%',
       },
-      body: {
-        overflow: 'hidden',
-      },
     }}
   />
 );

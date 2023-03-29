@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import Typography from '@mui/joy/Typography';
-import { Box, Button, Stack } from '@mui/joy';
+import Button from '@mui/joy/Button';
+import Stack from '@mui/joy/Stack';
 import ChevronRightCircle from 'icons/ChevronRightCircle';
-import styled from '@emotion/styled';
 import Link from 'next/link';
 
 export default function Home() {
   return (
-    <>
+    <Stack height="100%" justifyContent="center" alignItems="center" spacing={3}>
       <Head>
         <title>Read Ramayana</title>
         <meta name="title" content="Read Ramayana" />
@@ -20,15 +20,13 @@ export default function Home() {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
       </Head>
-      <Stack spacing={1}>
-        <Typography level="body1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ad, molestias tenetur quam ipsa nostrum hic
-          autem quaerat harum at aspernatur, repellendus illo iusto soluta tempora. Fugit, numquam! Illum, dolore.
-        </Typography>
-      </Stack>
-      <Button endDecorator={<ChevronRightCircle size={20} />} size="md" component={Link} href="/kanda">
+      <Typography level="h2" component="h1" textAlign="center" fontSize="1.75rem">
+        {/* Immerse yourself in the timeless epic of Ramayana by reading it online */}
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis autem voluptas, laudantium alias optio
+      </Typography>
+      <Button endDecorator={<ChevronRightCircle size={20} />} size="lg" component={Link} href="/kanda">
         Start Reading
       </Button>
-    </>
+    </Stack>
   );
 }

@@ -76,8 +76,4 @@ const Sarga = (props: TSargaProps) => {
 
 export default Sarga;
 
-const Container = styled(Stack)(({ theme }) => ({
-  height: '100%',
-  paddingLeft: theme.spacing(2),
-  paddingRight: theme.spacing(2),
-}));
+const Container = styled(Stack)(() => ({}));
