@@ -1,13 +1,19 @@
-import Head from 'next/head';
-import Typography from '@mui/joy/Typography';
-import Button from '@mui/joy/Button';
-import Stack from '@mui/joy/Stack';
-import ChevronRightCircle from 'icons/ChevronRightCircle';
 import Link from 'next/link';
+import Head from 'next/head';
+
+import Box from '@mui/joy/Box';
+import Stack from '@mui/joy/Stack';
+import Button from '@mui/joy/Button';
+import Typography from '@mui/joy/Typography';
+import { styled, useTheme } from '@mui/joy/styles';
+
+import { CgTrees } from 'react-icons/cg';
+import { GoChevronRight } from 'react-icons/go';
 
 export default function Home() {
+  const theme = useTheme();
   return (
-    <Stack height="100%" justifyContent="center" alignItems="center" spacing={3}>
+    <Container spacing={3}>
       <Head>
         <title>Read Ramayana</title>
         <meta name="title" content="Read Ramayana" />
@@ -24,9 +30,26 @@ export default function Home() {
         {/* Immerse yourself in the timeless epic of Ramayana by reading it online */}
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis autem voluptas, laudantium alias optio
       </Typography>
-      <Button endDecorator={<ChevronRightCircle size={20} />} size="lg" component={Link} href="/kanda">
+      <Button endDecorator={<GoChevronRight size={20} />} size="lg" component={Link} href="/kanda">
         Start Reading
       </Button>
-    </Stack>
+      <BackgroundImage>
+        <CgTrees size={400} color={`hsla(${theme.vars.palette.primary.mainChannel} / 0.25)`} />
+      </BackgroundImage>
+    </Container>
   );
 }
+
+const Container = styled(Stack)(() => ({
+  height: '100%',
+  justifyContent: 'center',
+  alignItems: 'center',
+}));
+
+const BackgroundImage = styled(Box)(() => ({
+  position: 'fixed',
+  bottom: '0',
+  right: '0',
+  transform: 'translate(120px, 67px)',
+  zIndex: -1,
+}));

@@ -1,6 +1,7 @@
 import { styled } from '@mui/joy';
 import Stack from '@mui/joy/Stack';
 import Breadcrumbs from 'components/Breadcrumbs';
+import NavigationBar from 'components/NavigationBar';
 import { useRouter } from 'next/router';
 
 type TLayoutProps = {
@@ -20,6 +21,7 @@ const Layout = ({ children }: TLayoutProps) => {
   return (
     <Container>
       {!isRootRoute && <Breadcrumbs />}
+      {!isRootRoute && <NavigationBar />}
       {children}
     </Container>
   );

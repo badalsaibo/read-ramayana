@@ -1,9 +1,9 @@
 import { styled, useTheme } from '@mui/joy';
 import JoyBreadcrumbs from '@mui/joy/Breadcrumbs';
-import ChevronRightCircle from 'icons/ChevronRightCircle';
 import JoyLink from '@mui/joy/Link';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { GoChevronRight } from 'react-icons/go';
 
 interface IBreadcrumbsData {
   text: string;
@@ -32,7 +32,7 @@ const Breadcrumbs = () => {
   const breadcrumbs = [{ text: 'home', url: '/' }, ...pathArray];
 
   return (
-    <StyledBreadcrumbs separator={<ChevronRightCircle size={14} color={theme.vars.palette.neutral[500]} />}>
+    <StyledBreadcrumbs separator={<GoChevronRight size={14} color={theme.vars.palette.neutral[500]} />}>
       {breadcrumbs.map(({ text, url }) => (
         <JoyLink component={Link} key={text} href={url} underline="hover" color="neutral">
           {text}

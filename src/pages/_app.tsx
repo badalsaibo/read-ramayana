@@ -13,6 +13,10 @@ const globalStyles = (
       'html, body, div#__next': {
         height: '100%',
       },
+      body: {
+        maxWidth: '768px',
+        margin: '0 auto',
+      },
     }}
   />
 );
@@ -20,10 +24,10 @@ const globalStyles = (
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <CssVarsProvider theme={extendTheme(themeConfig)} defaultMode="system">
-      {globalStyles}
       <HydrationResolver>
         <Layout>
           <CssBaseline />
+          {globalStyles}
           <Component {...pageProps} />
         </Layout>
       </HydrationResolver>
