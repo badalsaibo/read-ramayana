@@ -1,9 +1,12 @@
-import { List, ListItem, Typography, Sheet, Button, ListItemButton, ListItemDecorator } from '@mui/joy';
-import Stack from '@mui/joy/Stack';
+import List from '@mui/joy/List';
+import ListItem from '@mui/joy/ListItem';
+import Typography from '@mui/joy/Typography';
+import Sheet from '@mui/joy/Sheet';
+import ListItemButton from '@mui/joy/ListItemButton';
+import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import { KANDAS } from 'constant/kanda';
 import useKanda from 'hooks/provider/useKanda';
 import Hanuman from 'icons/Hanuman';
-import Link from 'next/link';
 
 import { CgTrees } from 'react-icons/cg';
 import { MdOutlineTempleHindu, MdOutlineHandshake } from 'react-icons/md';
@@ -28,19 +31,6 @@ const Sidebar = () => {
         {KANDAS.map(({ kanda, url }) => (
           <ListItem key={url}>
             <ListItemButton
-              // component={Link}
-              // href={`/kanda/${url}`}
-              sx={
-                {
-                  // '&:not(.Joy-Selected)': {
-                  //   color: (theme) => theme.vars.palette.primary[200],
-                  // },
-                  // '&:hover': {
-                  //   color: (theme) => theme.vars.palette.primary[100],
-                  //   backgroundColor: (theme) => `rgba(${theme.vars.palette.primary.mainChannel} / 0.15)`,
-                  // },
-                }
-              }
               selected={kanda === kandaRoot}
               variant={kanda === kandaRoot ? 'solid' : 'plain'}
               onClick={() => setKanda(kanda)}
