@@ -39,11 +39,27 @@ const Kanda = ({ chapters }: TKandaProps) => {
       <Divider />
 
       <Stack spacing={1} sx={{ mt: 1 }}>
-        {chapters.map(({ id, title, sarga }) => (
-          <Typography key={id} component={Link} href={`/kanda/${kanda}/${sarga}`} sx={{ textDecoration: 'none' }}>
-            {sarga}.&nbsp;{title}
-          </Typography>
-        ))}
+        <Grid container rowSpacing={2} columnSpacing={1}>
+          {chapters.map(({ id, title, sarga }) => (
+            <Grid xs={6} key={id}>
+              <Typography
+                key={id}
+                component={Link}
+                href={`/kanda/${kanda}/${sarga}`}
+                sx={{
+                  textDecoration: 'none',
+                  display: '-webkit-box',
+                  overflow: 'hidden',
+                  WebkitBoxOrient: 'vertical',
+                  WebkitLineClamp: 2,
+                }}
+                // noWrap
+              >
+                {sarga}.&nbsp;{title}
+              </Typography>
+            </Grid>
+          ))}
+        </Grid>
       </Stack>
     </Stack>
   );

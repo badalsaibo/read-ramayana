@@ -27,14 +27,13 @@ export default function Home() {
         <meta name="language" content="English" />
       </Head>
       <Typography level="h2" component="h1" textAlign="center" fontSize="1.75rem">
-        {/* Immerse yourself in the timeless epic of Ramayana by reading it online */}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis autem voluptas, laudantium alias optio
+        Immerse yourself in the timeless epic of Ramayana by reading it online
       </Typography>
       <Button endDecorator={<GoChevronRight size={20} />} size="lg" component={Link} href="/kanda">
         Start Reading
       </Button>
       <BackgroundImage>
-        <CgTrees size={400} color={`hsla(${theme.vars.palette.primary.mainChannel} / 0.25)`} />
+        <CgTrees size={400} color={`rgba(${theme.vars.palette.primary.mainChannel} / 0.25)`} />
       </BackgroundImage>
     </Container>
   );
