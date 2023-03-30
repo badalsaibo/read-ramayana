@@ -1,13 +1,21 @@
-import { Button, Divider, Grid, Stack, Typography } from '@mui/joy';
-import Breadcrumbs from 'components/Breadcrumbs';
-import { KANDAS } from 'constant/kanda';
-import { IChapters, TKanda } from 'interface/kanda';
-import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
+import { GetStaticPaths, GetStaticProps } from 'next';
+
+import Breadcrumbs from 'components/Breadcrumbs';
+import GenericHead from 'components/GenericHead';
+
+import { PAGE_TITLE } from 'constant';
+import { KANDAS } from 'constant/kanda';
+import { capitalizeFirstLetter } from 'utils';
 import { getChaptersOfKanda } from 'utils/ssg';
-// import { getAllChaptersOfKanda, getAllKandas } from '../utils/ssg';
+import { IChapters, TKanda } from 'interface/kanda';
+
+import Grid from '@mui/joy/Grid';
+import Stack from '@mui/joy/Stack';
+import Button from '@mui/joy/Button';
+import Divider from '@mui/joy/Divider';
+import Typography from '@mui/joy/Typography';
 
 interface Params extends ParsedUrlQuery {
   kanda: TKanda;
@@ -15,55 +23,60 @@ interface Params extends ParsedUrlQuery {
 
 type TKandaProps = {
   chapters: IChapters[];
+  kanda: TKanda;
 };
 
-const Kanda = ({ chapters }: TKandaProps) => {
-  const router = useRouter();
-  const { kanda } = router.query;
+const Kanda = ({ chapters, kanda }: TKandaProps) => {
   return (
-    <Stack spacing={2}>
-      <Breadcrumbs />
-      <Typography level="h1">Sargas</Typography>
-      <Divider />
+    <>
+      <GenericHead
+        title={`${capitalizeFirstLetter(kanda)} Kanda | ${PAGE_TITLE}`}
+        description={`Chapters of ${kanda} kanda in ${PAGE_TITLE}`}
+      />
+      <Stack spacing={2}>
+        <Breadcrumbs />
+        <Typography level="h1">Sargas</Typography>
+        <Divider />
 
-      <Stack>
-        <Grid container spacing={1}>
-          {chapters.map(({ id, sarga }) => (
-            <Grid xs={2} key={id}>
-              <Button variant="soft" fullWidth component={Link} href={`/kanda/${kanda}/${sarga}`}>
-                {sarga}
-              </Button>
-            </Grid>
-          ))}
-        </Grid>
+        <Stack>
+          <Grid container spacing={1}>
+            {chapters.map(({ id, sarga }) => (
+              <Grid xs={2} key={id}>
+                <Button variant="soft" fullWidth component={Link} href={`/kanda/${kanda}/${sarga}`}>
+                  {sarga}
+                </Button>
+              </Grid>
+            ))}
+          </Grid>
+        </Stack>
+
+        <Divider />
+
+        <Stack spacing={1} sx={{ mt: 1 }}>
+          <Grid container rowSpacing={2} columnSpacing={1}>
+            {chapters.map(({ id, title, sarga }) => (
+              <Grid xs={6} key={id}>
+                <Typography
+                  key={id}
+                  component={Link}
+                  href={`/kanda/${kanda}/${sarga}`}
+                  sx={{
+                    textDecoration: 'none',
+                    display: '-webkit-box',
+                    overflow: 'hidden',
+                    WebkitBoxOrient: 'vertical',
+                    WebkitLineClamp: 2,
+                  }}
+                  // noWrap
+                >
+                  {sarga}.&nbsp;{title}
+                </Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </Stack>
       </Stack>
-
-      <Divider />
-
-      <Stack spacing={1} sx={{ mt: 1 }}>
-        <Grid container rowSpacing={2} columnSpacing={1}>
-          {chapters.map(({ id, title, sarga }) => (
-            <Grid xs={6} key={id}>
-              <Typography
-                key={id}
-                component={Link}
-                href={`/kanda/${kanda}/${sarga}`}
-                sx={{
-                  textDecoration: 'none',
-                  display: '-webkit-box',
-                  overflow: 'hidden',
-                  WebkitBoxOrient: 'vertical',
-                  WebkitLineClamp: 2,
-                }}
-                // noWrap
-              >
-                {sarga}.&nbsp;{title}
-              </Typography>
-            </Grid>
-          ))}
-        </Grid>
-      </Stack>
-    </Stack>
+    </>
   );
 };
 
@@ -83,6 +96,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
+      kanda,
       chapters,
     },
   };

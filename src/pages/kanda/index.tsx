@@ -4,14 +4,15 @@ import Stack from '@mui/joy/Stack';
 import Divider from '@mui/joy/Divider';
 import Typography from '@mui/joy/Typography';
 
+import { PAGE_TITLE } from 'constant';
 import { KANDAS } from 'constant/kanda';
 import PaddedButton from 'components/PaddedButton';
-import Head from 'next/head';
+import GenericHead from 'components/GenericHead';
 
 const Kanda = () => {
   return (
     <Stack spacing={1}>
-      <Head></Head>
+      <GenericHead title={`Kandas | ${PAGE_TITLE}`} description={`List of kandas in ${PAGE_TITLE}`} />
       <Stack direction="row" alignItems="center">
         <Typography level="h1">Kandas</Typography>
       </Stack>

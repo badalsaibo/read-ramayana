@@ -7,6 +7,7 @@ import Button from '@mui/joy/Button';
 import Divider from '@mui/joy/Divider';
 import { styled } from '@mui/joy/styles';
 
+import { PAGE_TITLE } from 'constant';
 import { KANDAS } from 'constant/kanda';
 import { SargaContent, TKanda } from 'interface/kanda';
 import { getChapterOfKanda, getChaptersOfKanda } from 'utils/ssg';
@@ -15,6 +16,7 @@ import Breadcrumbs from 'components/Breadcrumbs';
 import RenderContent from 'components/RenderContent';
 import HtmlTypography from 'components/HtmlTypography';
 import DarkModeButton from 'components/DarkModeButton';
+import GenericHead from 'components/GenericHead';
 
 type TSargaProps = {
   id: string;
@@ -68,40 +70,43 @@ const Sarga = (props: TSargaProps) => {
   const renderPrevButton = Number(sarga) > 1;
 
   return (
-    <Container>
-      <Stack direction="row" alignItems="center" justifyContent="space-between">
-        <Breadcrumbs />
-        <DarkModeButton />
-      </Stack>
-      <HtmlTypography level="h2" component="h1">
-        {title}
-      </HtmlTypography>
-      <Stack gap={2}>
-        <Divider />
-        <HtmlTypography>{overview}</HtmlTypography>
-        <Divider />
-        <Stack>
-          {content.map((props, idx) => (
-            <RenderContent {...props} key={idx} />
-          ))}
+    <>
+      <GenericHead title={`${title} | ${PAGE_TITLE}`} description={overview} />
+      <Container>
+        <Stack direction="row" alignItems="center" justifyContent="space-between">
+          <Breadcrumbs />
+          <DarkModeButton />
         </Stack>
-        <Stack direction="row" gap={2}>
-          {renderPrevButton && (
+        <HtmlTypography level="h2" component="h1">
+          {title}
+        </HtmlTypography>
+        <Stack gap={2}>
+          <Divider />
+          <HtmlTypography>{overview}</HtmlTypography>
+          <Divider />
+          <Stack>
+            {content.map((props, idx) => (
+              <RenderContent {...props} key={idx} />
+            ))}
+          </Stack>
+          <Stack direction="row" gap={2}>
+            {renderPrevButton && (
+              <Stack sx={{ flex: 1 }}>
+                <Button size="lg" sx={{ py: 3 }} variant="outlined" component={Link} href={prevHref} color="neutral">
+                  Prev
+                </Button>
+              </Stack>
+            )}
+
             <Stack sx={{ flex: 1 }}>
-              <Button size="lg" sx={{ py: 3 }} variant="outlined" component={Link} href={prevHref} color="neutral">
-                Prev
+              <Button size="lg" sx={{ py: 3 }} variant="outlined" component={Link} href={nextHref} color="neutral">
+                Next
               </Button>
             </Stack>
-          )}
-
-          <Stack sx={{ flex: 1 }}>
-            <Button size="lg" sx={{ py: 3 }} variant="outlined" component={Link} href={nextHref} color="neutral">
-              Next
-            </Button>
           </Stack>
         </Stack>
-      </Stack>
-    </Container>
+      </Container>
+    </>
   );
 };
 
