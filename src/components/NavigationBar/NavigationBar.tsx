@@ -13,12 +13,20 @@ import { IoChevronBack } from 'react-icons/io5';
 import { CgPlayTrackPrevR, CgPlayTrackNextR } from 'react-icons/cg';
 
 const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
-  const theme = useTheme();
   const router = useRouter();
 
   const handleBackClick = () => {
     router.back();
   };
+
+  const linkPath = router.asPath.split('/');
+
+  const sarga = linkPath.pop();
+
+  const kanda = linkPath.pop();
+
+  const prevHref = `/kanda/${kanda}/${Number(sarga) - 1}`;
+  const nextHref = `/kanda/${kanda}/${Number(sarga) + 1}`;
 
   return (
     <Container direction="row" component={Sheet} variant="outlined">
@@ -32,13 +40,13 @@ const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
 
       {isSarga && (
         <>
-          <IconButton variant="outlined" component={Link} href="/">
+          <IconButton variant="outlined" component={Link} href={prevHref}>
             <CgPlayTrackPrevR size={24} />
           </IconButton>
-          <IconButton variant="outlined" component={Link} href="/kanda">
+          <IconButton variant="outlined" component={Link} href={`/kanda/${kanda}`}>
             <TbLayoutGrid size={24} />
           </IconButton>
-          <IconButton variant="outlined" component={Link} href="/">
+          <IconButton variant="outlined" component={Link} href={nextHref}>
             <CgPlayTrackNextR size={24} />
           </IconButton>
         </>
@@ -61,6 +69,9 @@ const Container = styled(Stack)<SheetProps & StackProps>(({ theme }) => ({
   '@media (max-width: 1023px)': {
     borderBottom: 'none',
     borderRight: 'none',
+  },
+  '@media (prefers-color-scheme: dark)': {
+    backgroundColor: 'hsl(211deg 20% 10% / 70%)',
   },
   gap: theme.spacing(2),
   '@media (min-width: 1024px)': {

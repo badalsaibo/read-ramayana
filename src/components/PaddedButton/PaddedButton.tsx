@@ -31,12 +31,15 @@ const Text = styled(Typography)<TTypography>(({ theme }) => ({
   fontSize: '1.25rem',
   color: theme.vars.palette.primary[600],
   fontWeight: '700',
+  '@media (prefers-color-scheme: dark)': {
+    color: theme.vars.palette.primary[100],
+  },
 }));
 
 const PaddedButton = ({ children, href, kanda }: TPadButtonProps) => {
   return (
     <StyledButton variant="soft" component={Link} href={href} kanda={kanda}>
-      <Text level="h1" component="p">
+      <Text level="h2" component="p">
         {children}
       </Text>
     </StyledButton>

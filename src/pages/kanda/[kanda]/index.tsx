@@ -1,4 +1,5 @@
 import { Button, Divider, Grid, Stack, Typography } from '@mui/joy';
+import Breadcrumbs from 'components/Breadcrumbs';
 import { KANDAS } from 'constant/kanda';
 import { IChapters, TKanda } from 'interface/kanda';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -21,7 +22,7 @@ const Kanda = ({ chapters }: TKandaProps) => {
   const { kanda } = router.query;
   return (
     <Stack spacing={2}>
-      <
+      <Breadcrumbs />
       <Typography level="h1">Sargas</Typography>
       <Divider />
 

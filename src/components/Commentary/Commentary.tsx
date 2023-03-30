@@ -20,4 +20,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
     marginBottom: 0,
     textAlign: 'justify',
   },
+  '@media (prefers-color-scheme: dark)': {
+    backgroundColor: 'hsl(247deg 31% 46% / 40%)',
+  },
 }));
