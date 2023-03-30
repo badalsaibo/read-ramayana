@@ -3,6 +3,7 @@ import Stack from '@mui/joy/Stack';
 import { Box } from '@mui/system';
 import Breadcrumbs from 'components/Breadcrumbs';
 import NavigationBar from 'components/NavigationBar';
+import StickyPositionFix from 'components/StickyPositionFix';
 import { useRouter } from 'next/router';
 
 type TLayoutProps = {
@@ -31,6 +32,7 @@ const Layout = ({ children, isSarga }: TLayoutProps) => {
     <Container>
       <PageContainer>{children}</PageContainer>
       {!isRootRoute && <NavigationBar isSarga={isSarga} />}
+      <StickyPositionFix />
     </Container>
   );
 };
