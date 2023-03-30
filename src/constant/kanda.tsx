@@ -17,10 +17,10 @@ export const KANDAS: IKandas[] = [
 ];
 
 export const KANDA_ICONS_MAP = {
-  bala: <TbBow size={SIZE} />,
-  ayodhya: <MdOutlineTempleHindu size={SIZE} />,
-  aranya: <CgTrees size={SIZE} />,
-  kishkindha: <MdOutlineHandshake size={SIZE} />,
-  sundara: <Hanuman size={SIZE} />,
-  yuddha: <TbSwords size={SIZE} />,
+  bala: TbBow,
+  ayodhya: MdOutlineTempleHindu,
+  aranya: CgTrees,
+  kishkindha: MdOutlineHandshake,
+  sundara: Hanuman,
+  yuddha: TbSwords,
 };

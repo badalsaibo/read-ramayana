@@ -1,7 +1,14 @@
-import { Button, styled, Typography } from '@mui/joy';
-import { TKanda } from 'interface/kanda';
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
+
+import { styled } from '@mui/joy';
+import Button from '@mui/joy/Button';
+import Typography from '@mui/joy/Typography';
+
+import { TKanda } from 'interface/kanda';
+import { KANDA_ICONS_MAP } from 'constant/kanda';
+
+import { getSvgStringFromComponent } from 'utils';
 
 type TPadButtonProps = {
   children: React.ReactNode;
@@ -19,12 +26,19 @@ type TStyledButtonProps = {
   component: React.ElementType;
 };
 
-const StyledButton = styled(Button)<TStyledButtonProps>(({ theme, kanda }) => ({
-  width: '100%',
-  textTransform: 'capitalize',
-  justifyContent: 'flex-start',
-  padding: `${theme.spacing(4)} ${theme.spacing(2)}`,
-}));
+const StyledButton = styled(Button)<TStyledButtonProps>(({ theme, kanda }) => {
+  const Icon = KANDA_ICONS_MAP[kanda];
+
+  const svgString = getSvgStringFromComponent({ component: <Icon size={24} /> });
+
+  return {
+    width: '100%',
+    textTransform: 'capitalize',
+    justifyContent: 'flex-start',
+    padding: `${theme.spacing(4)} ${theme.spacing(2)}`,
+    backgroundImage: `url("data:image/svg+xml,${svgString}")`,
+  };
+});
 
 const Text = styled(Typography)<TTypography>(({ theme }) => ({
   fontSize: '1.25rem',

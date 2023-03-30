@@ -10,6 +10,11 @@ const themeConfig: CssVarsThemeOptions = {
     h1: {
       fontWeight: 'var(--joy-fontWeight-xl)',
     },
+    body1: {
+      '@media (min-width: 1024px)': {
+        fontSize: '1.25rem',
+      },
+    },
   },
   components: {
     JoyButton: {
