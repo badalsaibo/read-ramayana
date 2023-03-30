@@ -6,10 +6,12 @@ import Typography from '@mui/joy/Typography';
 
 import { KANDAS } from 'constant/kanda';
 import PaddedButton from 'components/PaddedButton';
+import Head from 'next/head';
 
 const Kanda = () => {
   return (
     <Stack spacing={1}>
+      <Head></Head>
       <Stack direction="row" alignItems="center">
         <Typography level="h1">Kandas</Typography>
       </Stack>
