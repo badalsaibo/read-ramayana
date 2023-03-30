@@ -29,7 +29,9 @@ type TStyledButtonProps = {
 const StyledButton = styled(Button)<TStyledButtonProps>(({ theme, kanda }) => {
   const Icon = KANDA_ICONS_MAP[kanda];
 
-  const svgString = getSvgStringFromComponent({ component: <Icon size={24} /> });
+  const svgString = getSvgStringFromComponent({
+    component: <Icon size={24} color={theme.palette.mode === 'light' ? theme.palette.info[300] : 'currentColor'} />,
+  });
 
   return {
     width: '100%',
