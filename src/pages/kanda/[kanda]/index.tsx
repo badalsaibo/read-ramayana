@@ -21,6 +21,7 @@ const Kanda = ({ chapters }: TKandaProps) => {
   const { kanda } = router.query;
   return (
     <Stack spacing={2}>
+      <
       <Typography level="h1">Sargas</Typography>
       <Divider />
 
