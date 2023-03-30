@@ -24,16 +24,12 @@ const StyledButton = styled(Button)<TStyledButtonProps>(({ theme, kanda }) => ({
   textTransform: 'capitalize',
   justifyContent: 'flex-start',
   padding: `${theme.spacing(4)} ${theme.spacing(2)}`,
-  backgroundImage: '',
 }));
 
 const Text = styled(Typography)<TTypography>(({ theme }) => ({
   fontSize: '1.25rem',
-  color: theme.vars.palette.primary[600],
+  color: theme.palette.mode === 'light' ? theme.vars.palette.primary[600] : theme.vars.palette.primary[100],
   fontWeight: '700',
-  '@media (prefers-color-scheme: dark)': {
-    color: theme.vars.palette.primary[100],
-  },
 }));
 
 const PaddedButton = ({ children, href, kanda }: TPadButtonProps) => {

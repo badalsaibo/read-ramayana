@@ -4,9 +4,8 @@ import Stack from '@mui/joy/Stack';
 import Divider from '@mui/joy/Divider';
 import Typography from '@mui/joy/Typography';
 
-import Breadcrumbs from 'components/Breadcrumbs';
-import PaddedButton from 'components/PaddedButton';
 import { KANDAS } from 'constant/kanda';
+import PaddedButton from 'components/PaddedButton';
 
 const Kanda = () => {
   return (

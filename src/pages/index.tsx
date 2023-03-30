@@ -9,11 +9,12 @@ import { styled, useTheme } from '@mui/joy/styles';
 
 import { CgTrees } from 'react-icons/cg';
 import { GoChevronRight } from 'react-icons/go';
+import DarkModeButton from 'components/DarkModeButton';
 
 export default function Home() {
   const theme = useTheme();
   return (
-    <Container spacing={3}>
+    <Container>
       <Head>
         <title>Epic Ramayana</title>
         <meta name="title" content="Epic Ramayana" />
@@ -26,12 +27,17 @@ export default function Home() {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
       </Head>
-      <Typography level="h2" component="h1" textAlign="center" fontSize="1.75rem">
-        Immerse yourself in the timeless epic of Ramayana by reading it online
-      </Typography>
-      <Button endDecorator={<GoChevronRight size={20} />} size="lg" component={Link} href="/kanda">
-        Start Reading
-      </Button>
+      <Stack justifyContent="center" alignItems="center" flex="1" gap={3}>
+        <Typography level="h2" component="h1" textAlign="center" fontSize="1.75rem">
+          Immerse yourself in the timeless epic of Ramayana by reading it online
+        </Typography>
+        <Button endDecorator={<GoChevronRight size={20} />} size="lg" component={Link} href="/kanda">
+          Start Reading
+        </Button>
+      </Stack>
+      <Stack direction="row" justifyContent="start" sx={{ position: 'fixed', left: '16px', bottom: '16px' }}>
+        <DarkModeButton />
+      </Stack>
       <BackgroundImage>
         <CgTrees size={400} color={`rgba(${theme.vars.palette.primary.mainChannel} / 0.25)`} />
       </BackgroundImage>
@@ -41,8 +47,6 @@ export default function Home() {
 
 const Container = styled(Stack)(() => ({
   height: '100%',
-  justifyContent: 'center',
-  alignItems: 'center',
 }));
 
 const BackgroundImage = styled(Box)(() => ({
