@@ -6,11 +6,13 @@ import Button from '@mui/joy/Button';
 import Typography from '@mui/joy/Typography';
 import { styled, useTheme } from '@mui/joy/styles';
 
+import { PAGE_TITLE } from 'constant';
 import { CgTrees } from 'react-icons/cg';
 import { GoChevronRight } from 'react-icons/go';
-import DarkModeButton from 'components/DarkModeButton';
+import { GiMonsteraLeaf } from 'react-icons/gi';
+
 import GenericHead from 'components/GenericHead';
-import { PAGE_TITLE } from 'constant';
+import DarkModeButton from 'components/DarkModeButton';
 
 export default function Home() {
   const theme = useTheme();
@@ -29,9 +31,12 @@ export default function Home() {
         <Stack direction="row" justifyContent="start" sx={{ position: 'fixed', left: '16px', bottom: '16px' }}>
           <DarkModeButton />
         </Stack>
-        <BackgroundImage>
-          <CgTrees size={400} color={`rgba(${theme.vars.palette.primary.mainChannel} / 0.25)`} />
-        </BackgroundImage>
+        <CornerImage>
+          <CgTrees size={400} color={`rgba(${theme.vars.palette.primary.mainChannel} / 0.3)`} />
+        </CornerImage>
+        <TopLeftImage>
+          <GiMonsteraLeaf size={200} color={`rgba(${theme.vars.palette.primary.mainChannel} / 0.3)`} />
+        </TopLeftImage>
       </Container>
     </>
   );
@@ -41,10 +46,18 @@ const Container = styled(Stack)(() => ({
   height: '100%',
 }));
 
-const BackgroundImage = styled(Box)(() => ({
+const CornerImage = styled(Box)(() => ({
   position: 'fixed',
   bottom: '0',
   right: '0',
   transform: 'translate(120px, 67px)',
+  zIndex: -1,
+}));
+
+const TopLeftImage = styled(Box)(() => ({
+  position: 'fixed',
+  left: '0',
+  top: '0',
+  transform: 'translate(-120px, -67px)',
   zIndex: -1,
 }));
