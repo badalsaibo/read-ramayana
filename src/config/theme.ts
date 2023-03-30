@@ -39,6 +39,26 @@ const themeConfig: CssVarsThemeOptions = {
         },
       },
     },
+    dark: {
+      palette: {
+        primary: {
+          50: '#e4fbed',
+          100: '#bcf5d3',
+          200: '#8cefb7',
+          300: '#47e998',
+          400: '#00e17e',
+          500: '#00d969',
+          600: '#00c85d',
+          700: '#00b450',
+          800: '#00a244',
+          900: '#00812f',
+          outlinedColor: 'var(--joy-palette-primary-500)',
+          outlinedBorder: 'rgba(var(--joy-palette-primary-darkChannel) / 0.3)',
+          outlinedActiveBg: 'rgba(var(--joy-palette-primary-darkChannel) / 0.2)',
+          outlinedHoverBg: 'rgba(var(--joy-palette-primary-darkChannel) / 0.3)',
+        },
+      },
+    },
   },
 };
 
