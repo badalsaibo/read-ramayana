@@ -18,7 +18,7 @@ export default function Home() {
       <Head>
         <title>Epic Ramayana</title>
         <meta name="title" content="Epic Ramayana" />
-        <meta name="description" content="Epic ramayana online " />
+        <meta name="description" content="read ramayana online " />
         <meta
           name="keywords"
           content="ramayana, hinduism, india, ram, sita, lakshman, culture, heritage, ramayan, hanuman, bharat, mahabharata, "
