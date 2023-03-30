@@ -15,7 +15,6 @@ import GenericHead from 'components/GenericHead';
 import DarkModeButton from 'components/DarkModeButton';
 
 export default function Home() {
-  const theme = useTheme();
   return (
     <>
       <GenericHead title={PAGE_TITLE} description="Read Valimiki Ramayana online" />
@@ -31,11 +30,11 @@ export default function Home() {
         <Stack direction="row" justifyContent="start" sx={{ position: 'fixed', left: '16px', bottom: '16px' }}>
           <DarkModeButton />
         </Stack>
-        <CornerImage>
-          <CgTrees size={400} color={`rgba(${theme.vars.palette.primary.mainChannel} / 0.3)`} />
-        </CornerImage>
+        <BottomRightImage>
+          <CgTrees size={400} />
+        </BottomRightImage>
         <TopLeftImage>
-          <GiMonsteraLeaf size={200} color={`rgba(${theme.vars.palette.primary.mainChannel} / 0.3)`} />
+          <GiMonsteraLeaf size={200} />
         </TopLeftImage>
       </Container>
     </>
@@ -46,18 +45,20 @@ const Container = styled(Stack)(() => ({
   height: '100%',
 }));
 
-const CornerImage = styled(Box)(() => ({
+const BottomRightImage = styled(Box)(({ theme }) => ({
   position: 'fixed',
   bottom: '0',
   right: '0',
   transform: 'translate(120px, 67px)',
   zIndex: -1,
+  color: `rgba(${theme.vars.palette.primary.mainChannel} / 0.3)`,
 }));
 
-const TopLeftImage = styled(Box)(() => ({
+const TopLeftImage = styled(Box)(({ theme }) => ({
   position: 'fixed',
   left: '0',
   top: '0',
   transform: 'translate(-120px, -67px)',
   zIndex: -1,
+  color: `rgba(${theme.vars.palette.primary.mainChannel} / 0.3)`,
 }));

@@ -32,36 +32,47 @@ const Layout = ({ children, isSarga }: TLayoutProps) => {
   const router = useRouter();
   const isRootRoute = router.asPath === '/';
 
-  const theme = useTheme();
   return (
     <Container>
       <PageContainer>{children}</PageContainer>
       {!isRootRoute && <NavigationBar isSarga={isSarga} />}
       <StickyPositionFix />
-      <BackgroundImage>
-        <CgTrees size={400} color={`rgba(${theme.vars.palette.primary.mainChannel} / 0.1)`} />
-      </BackgroundImage>
-      <TopLeftImage>
-        <GiMonsteraLeaf size={200} color={`rgba(${theme.vars.palette.primary.mainChannel} / 0.2)`} />
-      </TopLeftImage>
+      {!isRootRoute && (
+        <>
+          <BottomRight>
+            <CgTrees size={400} />
+          </BottomRight>
+          <TopLeftImage>
+            <GiMonsteraLeaf size={200} />
+          </TopLeftImage>
+        </>
+      )}
     </Container>
   );
 };
 
 export default Layout;
 
-const BackgroundImage = styled(Box)(() => ({
+const BottomRight = styled(Box)(({ theme }) => ({
   position: 'fixed',
   bottom: '0',
   right: '0',
   transform: 'translate(120px, 67px)',
   zIndex: -1,
+  color: `rgba(${theme.vars.palette.primary.mainChannel} / 0.25)`,
+  '@media (max-width: 1023px)': {
+    color: `rgba(${theme.vars.palette.primary.mainChannel} / 0.05)`,
+  },
 }));
 
-const TopLeftImage = styled(Box)(() => ({
+const TopLeftImage = styled(Box)(({ theme }) => ({
   position: 'fixed',
   left: '0',
   top: '0',
   transform: 'translate(-120px, -67px)',
   zIndex: -1,
+  color: `rgba(${theme.vars.palette.primary.mainChannel} / 0.25)`,
+  '@media (max-width: 1023px)': {
+    color: `rgba(${theme.vars.palette.primary.mainChannel} / 0.1)`,
+  },
 }));
