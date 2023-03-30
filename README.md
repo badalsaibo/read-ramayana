@@ -1,8 +1,9 @@
 # Motivation
 
-An archival in process for the famous ramayana site `https://www.valmikiramayan.net/`
+An archival in process for the famous ramayana site `https://www.valmikiramayan.net/`.
 
-# Tasks
+Site contains only the proses part of the aforementioned site.
 
-- [ ] Data collection
-  - [ ] Migrate data from remote to md files
+# Site
+
+https://epicramayana.com
