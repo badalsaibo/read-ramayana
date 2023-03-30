@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
 import Stack from '@mui/joy/Stack';
 import { KANDAS } from 'constant/kanda';
@@ -6,7 +6,6 @@ import { SargaContent, TKanda } from 'interface/kanda';
 import { ParsedUrlQuery } from 'querystring';
 import { getChapterOfKanda, getChaptersOfKanda } from 'utils/ssg';
 import HtmlTypography from 'components/HtmlTypography';
-import ArrowHr from 'components/ArrowHr';
 import RenderContent from 'components/RenderContent';
 import { Box, Button, Chip, Divider, Sheet, styled, Typography } from '@mui/joy';
 import { TbLayoutGrid } from 'react-icons/tb';
@@ -71,7 +70,7 @@ const Sarga = (props: TSargaProps) => {
       <HtmlTypography level="h2" component="h1">
         {title}
       </HtmlTypography>
-      <Stack>
+      <Stack gap={2}>
         <Divider />
         <HtmlTypography>{overview}</HtmlTypography>
         <Divider />

@@ -6,6 +6,15 @@ import GlobalStyles from '@mui/joy/GlobalStyles';
 import CssBaseline from '@mui/joy/CssBaseline';
 import Layout from 'components/Layout';
 import HydrationResolver from 'components/HydrationResolver';
+import { NextPage } from 'next';
+
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  isSarga?: boolean;
+};
+
+type CustomAppProps = AppProps & {
+  Component: NextPageWithLayout;
+};
 
 const globalStyles = (
   <GlobalStyles
@@ -21,11 +30,12 @@ const globalStyles = (
   />
 );
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: CustomAppProps) {
+  const isSarga = Component.isSarga || false;
   return (
     <CssVarsProvider theme={extendTheme(themeConfig)} defaultMode="system">
       <HydrationResolver>
-        <Layout>
+        <Layout isSarga={isSarga}>
           <CssBaseline />
           {globalStyles}
           <Component {...pageProps} />

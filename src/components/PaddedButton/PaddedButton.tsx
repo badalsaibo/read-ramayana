@@ -14,9 +14,9 @@ type TTypography = {
 };
 
 type TStyledButtonProps = {
-  component: React.ElementType;
   href: string;
   kanda: TKanda;
+  component: React.ElementType;
 };
 
 const StyledButton = styled(Button)<TStyledButtonProps>(({ theme, kanda }) => ({

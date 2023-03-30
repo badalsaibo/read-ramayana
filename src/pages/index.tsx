@@ -15,9 +15,9 @@ export default function Home() {
   return (
     <Container spacing={3}>
       <Head>
-        <title>Read Ramayana</title>
-        <meta name="title" content="Read Ramayana" />
-        <meta name="description" content="Read ramayana online " />
+        <title>Epic Ramayana</title>
+        <meta name="title" content="Epic Ramayana" />
+        <meta name="description" content="Epic ramayana online " />
         <meta
           name="keywords"
           content="ramayana, hinduism, india, ram, sita, lakshman, culture, heritage, ramayan, hanuman, bharat, mahabharata, "

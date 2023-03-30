@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 
 type TLayoutProps = {
   children: React.ReactNode;
+  isSarga: boolean;
 };
 
 const Container = styled(Stack)(({ theme }) => ({
@@ -23,14 +24,14 @@ const PageContainer = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
-const Layout = ({ children }: TLayoutProps) => {
+const Layout = ({ children, isSarga }: TLayoutProps) => {
   const router = useRouter();
 
   const isRootRoute = router.asPath === '/';
   return (
     <Container>
       <PageContainer>{children}</PageContainer>
-      {!isRootRoute && <NavigationBar />}
+      {!isRootRoute && <NavigationBar isSarga={isSarga} />}
     </Container>
   );
 };

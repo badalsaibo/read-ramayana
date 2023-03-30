@@ -11,7 +11,9 @@ import { KANDAS } from 'constant/kanda';
 const Kanda = () => {
   return (
     <Stack spacing={1}>
-      <Typography level="h1">Kandas</Typography>
+      <Stack direction="row" alignItems="center">
+        <Typography level="h1">Kandas</Typography>
+      </Stack>
       <Divider sx={{ mb: 1 }} />
       <Box>
         <Grid container spacing={2}>

@@ -1,16 +1,16 @@
-import Stack from '@mui/joy/Stack';
-import IconButton from '@mui/joy/IconButton';
-import { RiHome6Line } from 'react-icons/ri';
-import { IoChevronBack } from 'react-icons/io5';
-import { FiChevronLeft } from 'react-icons/fi';
-import { HiOutlineBookOpen } from 'react-icons/hi';
-import { TbLayoutGrid } from 'react-icons/tb';
-import { CgPlayTrackPrevR, CgPlayTrackNextR } from 'react-icons/cg';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Sheet, styled, useTheme, SheetProps } from '@mui/joy';
-import { TbBow } from 'react-icons/tb';
+
+import Stack from '@mui/joy/Stack';
+import Sheet from '@mui/joy/Sheet';
+import IconButton from '@mui/joy/IconButton';
 import type { StackProps } from '@mui/system';
+import { styled, useTheme, SheetProps } from '@mui/joy';
+
+import { FiBook } from 'react-icons/fi';
+import { useRouter } from 'next/router';
+import { TbLayoutGrid } from 'react-icons/tb';
+import { IoChevronBack } from 'react-icons/io5';
+import { CgPlayTrackPrevR, CgPlayTrackNextR } from 'react-icons/cg';
 
 const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
   const theme = useTheme();
@@ -35,6 +35,9 @@ const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
           <IconButton variant="outlined" component={Link} href="/">
             <CgPlayTrackPrevR size={24} />
           </IconButton>
+          <IconButton variant="outlined" component={Link} href="/kanda">
+            <TbLayoutGrid size={24} />
+          </IconButton>
           <IconButton variant="outlined" component={Link} href="/">
             <CgPlayTrackNextR size={24} />
           </IconButton>
@@ -42,15 +45,7 @@ const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
       )}
 
       <IconButton variant="outlined" component={Link} href="/kanda">
-        <TbLayoutGrid size={24} />
-      </IconButton>
-
-      <IconButton variant="outlined">
-        <HiOutlineBookOpen size={24} />
-      </IconButton>
-
-      <IconButton variant="outlined" component={Link} href="/kanda">
-        <TbBow size={24} transform="rotate(-45)" />
+        <FiBook size={24} />
       </IconButton>
     </Container>
   );
