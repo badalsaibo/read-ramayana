@@ -14,6 +14,7 @@ import { getChapterOfKanda, getChaptersOfKanda } from 'utils/ssg';
 import Breadcrumbs from 'components/Breadcrumbs';
 import RenderContent from 'components/RenderContent';
 import HtmlTypography from 'components/HtmlTypography';
+import DarkModeButton from 'components/DarkModeButton';
 
 type TSargaProps = {
   id: string;
@@ -68,7 +69,10 @@ const Sarga = (props: TSargaProps) => {
 
   return (
     <Container>
-      <Breadcrumbs />
+      <Stack direction="row" alignItems="center" justifyContent="space-between">
+        <Breadcrumbs />
+        <DarkModeButton />
+      </Stack>
       <HtmlTypography level="h2" component="h1">
         {title}
       </HtmlTypography>

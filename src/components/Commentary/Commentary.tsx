@@ -13,14 +13,11 @@ export default Commentary;
 
 const Wrapper = styled(Box)(({ theme }) => ({
   padding: theme.spacing(1),
-  backgroundColor: `rgba(${theme.vars.palette.success.mainChannel} / 0.15)`,
+  backgroundColor: theme.palette.mode === 'light' ? 'hsl(215deg 50% 79% / 40%)' : 'hsl(247deg 31% 46% / 40%)',
   borderRadius: theme.spacing(1),
   '& p': {
     marginTop: 0,
     marginBottom: 0,
     textAlign: 'justify',
-  },
-  '@media (prefers-color-scheme: dark)': {
-    backgroundColor: 'hsl(247deg 31% 46% / 40%)',
   },
 }));
