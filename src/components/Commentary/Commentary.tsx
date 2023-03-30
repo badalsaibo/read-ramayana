@@ -12,7 +12,7 @@ const Commentary = ({ children }: TCommentaryProps) => {
 export default Commentary;
 
 const Wrapper = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(1),
+  padding: theme.spacing(2),
   backgroundColor: theme.palette.mode === 'light' ? 'hsl(215deg 50% 79% / 40%)' : 'hsl(247deg 31% 46% / 40%)',
   borderRadius: theme.spacing(1),
   '& p': {
