@@ -1,17 +1,19 @@
+import Link from 'next/link';
+import { ParsedUrlQuery } from 'querystring';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import Stack from '@mui/joy/Stack';
+import Button from '@mui/joy/Button';
+import Divider from '@mui/joy/Divider';
+import { styled } from '@mui/joy/styles';
+
 import { KANDAS } from 'constant/kanda';
 import { SargaContent, TKanda } from 'interface/kanda';
-import { ParsedUrlQuery } from 'querystring';
 import { getChapterOfKanda, getChaptersOfKanda } from 'utils/ssg';
-import HtmlTypography from 'components/HtmlTypography';
-import RenderContent from 'components/RenderContent';
-import { Box, Button, Chip, Divider, Sheet, styled, Typography } from '@mui/joy';
-import { TbLayoutGrid } from 'react-icons/tb';
-import { HiOutlineBookOpen } from 'react-icons/hi';
+
 import Breadcrumbs from 'components/Breadcrumbs';
-import Link from 'next/link';
+import RenderContent from 'components/RenderContent';
+import HtmlTypography from 'components/HtmlTypography';
 
 type TSargaProps = {
   id: string;
