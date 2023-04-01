@@ -1,4 +1,4 @@
-import { useColorScheme } from '@mui/joy';
+import { useColorScheme } from '@mui/joy/styles';
 import IconButton from '@mui/joy/IconButton';
 import { useEffect, useRef } from 'react';
 
@@ -9,7 +9,7 @@ const DarkModeButton = () => {
 
   const isFirstLoad = useRef(true);
 
-  const currentMode = isFirstLoad.current ? systemMode : mode;
+  const currentMode = isFirstLoad.current ? systemMode ?? mode : mode;
 
   const onClick = () => {
     setMode(currentMode === 'light' ? 'dark' : 'light');

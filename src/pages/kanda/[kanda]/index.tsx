@@ -4,6 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 
 import Breadcrumbs from 'components/Breadcrumbs';
 import GenericHead from 'components/GenericHead';
+import DarkModeButton from 'components/DarkModeButton/';
 
 import { PAGE_TITLE } from 'constant';
 import { KANDAS } from 'constant/kanda';
@@ -34,10 +35,12 @@ const Kanda = ({ chapters, kanda }: TKandaProps) => {
         description={`Chapters of ${kanda} kanda in ${PAGE_TITLE}`}
       />
       <Stack spacing={2}>
-        <Breadcrumbs />
+        <Stack direction="row" alignItems="center" justifyContent="space-between">
+          <Breadcrumbs />
+          <DarkModeButton />
+        </Stack>
         <Typography level="h1">Sargas</Typography>
         <Divider />
-
         <Stack>
           <Grid container spacing={1}>
             {chapters.map(({ id, sarga }) => (
