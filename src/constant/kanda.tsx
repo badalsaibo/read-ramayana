@@ -24,3 +24,12 @@ export const KANDA_ICONS_MAP = {
   sundara: Hanuman,
   yuddha: TbSwords,
 };
+
+export const KANDA_CHAPTER_LENGTH = {
+  bala: 77,
+  ayodhya: 119,
+  aranya: 75,
+  kishkindha: 67,
+  sundara: 68,
+  yuddha: 128,
+};

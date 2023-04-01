@@ -11,6 +11,8 @@ import { useRouter } from 'next/router';
 import { TbLayoutGrid } from 'react-icons/tb';
 import { IoChevronBack } from 'react-icons/io5';
 import { CgPlayTrackPrevR, CgPlayTrackNextR } from 'react-icons/cg';
+import { KANDAS, KANDA_CHAPTER_LENGTH } from 'constant/kanda';
+import { TKanda } from 'interface/kanda';
 
 const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
   const router = useRouter();
@@ -23,10 +25,28 @@ const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
 
   const sarga = linkPath.pop();
 
-  const kanda = linkPath.pop();
+  const kanda = linkPath.pop() as TKanda;
 
-  const prevHref = `/kanda/${kanda}/${Number(sarga) - 1}`;
-  const nextHref = `/kanda/${kanda}/${Number(sarga) + 1}`;
+  const isFirstChapter = Number(sarga) === 1;
+  const isLastChapter = Number(sarga) === KANDA_CHAPTER_LENGTH[kanda];
+
+  let prevHref = `/kanda/${kanda}/${Number(sarga) - 1}`;
+  let nextHref = `/kanda/${kanda}/${Number(sarga) + 1}`;
+
+  if (isFirstChapter) {
+    const currKandaIndex = KANDAS.findIndex(({ kanda: _kanda }) => _kanda === kanda);
+    const prevKandaIndex = (currKandaIndex - 1) % KANDAS.length;
+    console.log(prevKandaIndex);
+    const { kanda: prevKanda } = KANDAS.slice(prevKandaIndex)[0];
+    prevHref = `/kanda/${prevKanda}/${KANDA_CHAPTER_LENGTH[prevKanda]}`;
+  }
+
+  if (isLastChapter) {
+    const currKandaIndex = KANDAS.findIndex(({ kanda: _kanda }) => _kanda === kanda);
+    const nextKandaIndex = (currKandaIndex + 1) % KANDAS.length;
+    const { kanda: nextKanda } = KANDAS.slice(nextKandaIndex)[0];
+    nextHref = `/kanda/${nextKanda}/1`;
+  }
 
   return (
     <Container direction="row" component={Sheet} variant="outlined">
@@ -39,9 +59,11 @@ const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
           <IconButton variant="outlined" component={Link} href={prevHref}>
             <CgPlayTrackPrevR size={24} />
           </IconButton>
+
           <IconButton variant="outlined" component={Link} href={`/kanda/${kanda}`}>
             <TbLayoutGrid size={24} />
           </IconButton>
+
           <IconButton variant="outlined" component={Link} href={nextHref}>
             <CgPlayTrackNextR size={24} />
           </IconButton>

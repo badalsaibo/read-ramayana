@@ -8,7 +8,7 @@ import Divider from '@mui/joy/Divider';
 import { styled } from '@mui/joy/styles';
 
 import { PAGE_TITLE } from 'constant';
-import { KANDAS } from 'constant/kanda';
+import { KANDAS, KANDA_CHAPTER_LENGTH } from 'constant/kanda';
 import { SargaContent, TKanda } from 'interface/kanda';
 import { getChapterOfKanda, getChaptersOfKanda } from 'utils/ssg';
 
@@ -64,10 +64,26 @@ export const getStaticProps: GetStaticProps<TSargaProps, IParams> = async ({ par
 const Sarga = (props: TSargaProps) => {
   const { title, overview, content, kanda, sarga } = props;
 
-  const prevHref = `/kanda/${kanda}/${Number(sarga) - 1}`;
-  const nextHref = `/kanda/${kanda}/${Number(sarga) + 1}`;
+  let prevHref = `/kanda/${kanda}/${Number(sarga) - 1}`;
+  let nextHref = `/kanda/${kanda}/${Number(sarga) + 1}`;
 
-  const renderPrevButton = Number(sarga) > 1;
+  const isFirstChapter = Number(sarga) === 1;
+  const isLastChapter = Number(sarga) === KANDA_CHAPTER_LENGTH[kanda];
+
+  if (isFirstChapter) {
+    const currKandaIndex = KANDAS.findIndex(({ kanda: _kanda }) => _kanda === kanda);
+    const prevKandaIndex = (currKandaIndex - 1) % KANDAS.length;
+    console.log(prevKandaIndex);
+    const { kanda: prevKanda } = KANDAS.slice(prevKandaIndex)[0];
+    prevHref = `/kanda/${prevKanda}/${KANDA_CHAPTER_LENGTH[prevKanda]}`;
+  }
+
+  if (isLastChapter) {
+    const currKandaIndex = KANDAS.findIndex(({ kanda: _kanda }) => _kanda === kanda);
+    const nextKandaIndex = (currKandaIndex + 1) % KANDAS.length;
+    const { kanda: nextKanda } = KANDAS.slice(nextKandaIndex)[0];
+    nextHref = `/kanda/${nextKanda}/1`;
+  }
 
   return (
     <>
@@ -90,13 +106,11 @@ const Sarga = (props: TSargaProps) => {
             ))}
           </Stack>
           <Stack direction="row" gap={2}>
-            {renderPrevButton && (
-              <Stack sx={{ flex: 1 }}>
-                <Button size="lg" sx={{ py: 3 }} variant="outlined" component={Link} href={prevHref} color="neutral">
-                  Prev
-                </Button>
-              </Stack>
-            )}
+            <Stack sx={{ flex: 1 }}>
+              <Button size="lg" sx={{ py: 3 }} variant="outlined" component={Link} href={prevHref} color="neutral">
+                Prev
+              </Button>
+            </Stack>
 
             <Stack sx={{ flex: 1 }}>
               <Button size="lg" sx={{ py: 3 }} variant="outlined" component={Link} href={nextHref} color="neutral">
