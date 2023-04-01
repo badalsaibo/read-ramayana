@@ -36,7 +36,6 @@ const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
   if (isFirstChapter) {
     const currKandaIndex = KANDAS.findIndex(({ kanda: _kanda }) => _kanda === kanda);
     const prevKandaIndex = (currKandaIndex - 1) % KANDAS.length;
-    console.log(prevKandaIndex);
     const { kanda: prevKanda } = KANDAS.slice(prevKandaIndex)[0];
     prevHref = `/kanda/${prevKanda}/${KANDA_CHAPTER_LENGTH[prevKanda]}`;
   }
