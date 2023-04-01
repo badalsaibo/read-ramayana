@@ -6,7 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        {getInitColorSchemeScript()}
+        {getInitColorSchemeScript({ defaultMode: 'system' })}
         <Main />
         <NextScript />
       </body>
