@@ -7,7 +7,6 @@ import { CssVarsProvider, extendTheme } from '@mui/joy/styles';
 
 import themeConfig from 'config/theme';
 import Layout from 'components/Layout';
-import HydrationResolver from 'components/HydrationResolver';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   isSarga?: boolean;
@@ -35,13 +34,11 @@ export default function App({ Component, pageProps }: CustomAppProps) {
   const isSarga = Component.isSarga || false;
   return (
     <CssVarsProvider theme={extendTheme(themeConfig)} defaultMode="system">
-      <HydrationResolver>
-        <Layout isSarga={isSarga}>
-          <CssBaseline />
-          {globalStyles}
-          <Component {...pageProps} />
-        </Layout>
-      </HydrationResolver>
+      <Layout isSarga={isSarga}>
+        <CssBaseline />
+        {globalStyles}
+        <Component {...pageProps} />
+      </Layout>
     </CssVarsProvider>
   );
 }
