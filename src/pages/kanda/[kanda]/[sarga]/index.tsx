@@ -48,7 +48,7 @@ export const getStaticPaths: GetStaticPaths<IParams> = async () => {
     });
   });
 
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps<TSargaProps, IParams> = async ({ params }) => {
