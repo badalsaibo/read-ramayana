@@ -1,6 +1,6 @@
 import { renderToStaticMarkup } from 'react-dom/server';
 
-export const getSvgStringFromComponent = ({ component }: { component: React.ReactElement }) =>
+export const getSvgStringFromComponent = (component: React.ReactElement) =>
   encodeURIComponent(renderToStaticMarkup(component));
 
 export const capitalizeFirstLetter = (string: string) => {

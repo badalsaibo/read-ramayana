@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-import { styled } from '@mui/joy';
+import { styled, useTheme } from '@mui/joy';
 import Button from '@mui/joy/Button';
 import Typography from '@mui/joy/Typography';
 
@@ -24,15 +24,10 @@ type TStyledButtonProps = {
   href: string;
   kanda: TKanda;
   component: React.ElementType;
+  svgString: string;
 };
 
-const StyledButton = styled(Button)<TStyledButtonProps>(({ theme, kanda }) => {
-  const Icon = KANDA_ICONS_MAP[kanda];
-
-  const svgString = getSvgStringFromComponent({
-    component: <Icon size={24} color={theme.palette.custom.paddedButtonIcon} />,
-  });
-
+const StyledButton = styled(Button)<TStyledButtonProps>(({ theme, svgString }) => {
   return {
     width: '100%',
     textTransform: 'capitalize',
@@ -49,12 +44,29 @@ const Text = styled(Typography)<TTypography>(({ theme }) => ({
 }));
 
 const PaddedButton = ({ children, href, kanda }: TPadButtonProps) => {
+  const [isMounted, setIsMounted] = useState(false);
+  const theme = useTheme();
+
+  const Icon = KANDA_ICONS_MAP[kanda];
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  let svgString = '';
+
+  if (isMounted) {
+    svgString = getSvgStringFromComponent(<Icon size={24} color={theme.palette.custom.paddedButtonIcon} />);
+  }
+
   return (
-    <StyledButton variant="soft" component={Link} href={href} kanda={kanda}>
+    // <HydrationResolver>
+    <StyledButton variant="soft" component={Link} href={href} kanda={kanda} svgString={svgString}>
       <Text level="h2" component="p">
         {children}
       </Text>
     </StyledButton>
+    // </HydrationResolver>
   );
 };
 

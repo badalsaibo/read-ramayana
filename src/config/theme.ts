@@ -90,7 +90,7 @@ const themeConfig: CssVarsThemeOptions = {
         },
         custom: {
           paddedButton: 'var(--joy-palette-primary-100)',
-          paddedButtonIcon: 'currentColor',
+          paddedButtonIcon: theme.palette.common.black,
           commentaryBg: 'hsl(247deg 31% 46% / 40%)',
         },
       },
