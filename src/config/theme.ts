@@ -89,7 +89,7 @@ const themeConfig: CssVarsThemeOptions = {
           navigationBar: 'hsl(211deg 20% 10% / 70%)',
         },
         custom: {
-          paddedButton: 'var(--joy-palette-primary-600)',
+          paddedButton: 'var(--joy-palette-primary-100)',
           paddedButtonIcon: 'currentColor',
           commentaryBg: 'hsl(247deg 31% 46% / 40%)',
         },
