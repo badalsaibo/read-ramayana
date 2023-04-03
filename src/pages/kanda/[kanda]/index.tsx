@@ -39,7 +39,9 @@ const Kanda = ({ chapters, kanda }: TKandaProps) => {
           <Breadcrumbs />
           <DarkModeButton />
         </Stack>
-        <Typography level="h1">Sargas</Typography>
+        <Typography level="h1" sx={{ textTransform: 'capitalize' }}>
+          {kanda}
+        </Typography>
         <Divider />
         <Stack>
           <Grid container spacing={1}>
