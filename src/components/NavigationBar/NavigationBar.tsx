@@ -78,9 +78,7 @@ const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
 
 const Container = styled(Stack)<SheetProps & StackProps>(({ theme }) => ({
   padding: theme.spacing(2),
-  left: 0,
   bottom: 0,
-  right: 0,
   position: 'fixed',
   backdropFilter: 'blur(7px)',
   backgroundColor: theme.vars.palette.background.navigationBar,
@@ -88,10 +86,11 @@ const Container = styled(Stack)<SheetProps & StackProps>(({ theme }) => ({
   '@media (max-width: 1023px)': {
     borderBottom: 'none',
     borderRight: 'none',
+    right: 0,
+    left: 0,
   },
   gap: theme.spacing(2),
   '@media (min-width: 1024px)': {
-    position: 'fixed',
     left: '-8px',
     flexDirection: 'column',
     alignItems: 'center',
