@@ -19,5 +19,8 @@ const Wrapper = styled(Box)(({ theme }) => ({
     marginTop: 0,
     marginBottom: 0,
     textAlign: 'justify',
+    em: {
+      wordBreak: 'break-all',
+    },
   },
 }));
