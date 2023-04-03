@@ -26,6 +26,7 @@ const Container = styled(Stack)(({ theme }) => ({
 const PageContainer = styled(Box)(({ theme }) => ({
   height: '100%',
   padding: theme.spacing(2),
+  paddingBottom: '74px',
 }));
 
 const Layout = ({ children, isSarga }: TLayoutProps) => {

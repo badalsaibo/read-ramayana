@@ -27,15 +27,17 @@ type TStyledButtonProps = {
   svgString: string;
 };
 
-const StyledButton = styled(Button)<TStyledButtonProps>(({ theme, svgString }) => {
-  return {
-    width: '100%',
-    textTransform: 'capitalize',
-    justifyContent: 'flex-start',
-    padding: `${theme.spacing(4)} ${theme.spacing(2)}`,
-    backgroundImage: `url("data:image/svg+xml,${svgString}")`,
-  };
-});
+const StyledButton = styled(Button, { shouldForwardProp: (prop) => prop !== 'svgString' })<TStyledButtonProps>(
+  ({ theme, svgString }) => {
+    return {
+      width: '100%',
+      textTransform: 'capitalize',
+      justifyContent: 'flex-start',
+      padding: `${theme.spacing(4)} ${theme.spacing(2)}`,
+      backgroundImage: `url("data:image/svg+xml,${svgString}")`,
+    };
+  }
+);
 
 const Text = styled(Typography)<TTypography>(({ theme }) => ({
   fontSize: '1.25rem',

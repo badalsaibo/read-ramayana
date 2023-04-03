@@ -78,8 +78,10 @@ const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
 
 const Container = styled(Stack)<SheetProps & StackProps>(({ theme }) => ({
   padding: theme.spacing(2),
+  left: 0,
   bottom: 0,
-  position: 'sticky',
+  right: 0,
+  position: 'fixed',
   backdropFilter: 'blur(7px)',
   backgroundColor: theme.vars.palette.background.navigationBar,
   borderLeft: 'none',
