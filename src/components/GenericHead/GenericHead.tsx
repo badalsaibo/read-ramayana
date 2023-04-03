@@ -11,7 +11,7 @@ const GenericHead = ({ title, description }: { title: string; description: strin
         content="ramayana, valmiki, hinduism, india, ram, sita, lakshman, culture, heritage, ramayan, hanuman, bharat, mahabharata, epic, itihasa"
       />
       <meta name="robots" content="index, follow" />
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
     </Head>
   );

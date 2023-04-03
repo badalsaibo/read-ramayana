@@ -30,7 +30,7 @@ const StyledButton = styled(Button)<TStyledButtonProps>(({ theme, kanda }) => {
   const Icon = KANDA_ICONS_MAP[kanda];
 
   const svgString = getSvgStringFromComponent({
-    component: <Icon size={24} color={theme.palette.mode === 'light' ? theme.palette.info[300] : 'currentColor'} />,
+    component: <Icon size={24} color={theme.palette.custom.paddedButtonIcon} />,
   });
 
   return {
@@ -44,7 +44,7 @@ const StyledButton = styled(Button)<TStyledButtonProps>(({ theme, kanda }) => {
 
 const Text = styled(Typography)<TTypography>(({ theme }) => ({
   fontSize: '1.25rem',
-  color: theme.palette.mode === 'light' ? theme.vars.palette.primary[600] : theme.vars.palette.primary[100],
+  color: theme.vars.palette.custom.paddedButton,
   fontWeight: '700',
 }));
 

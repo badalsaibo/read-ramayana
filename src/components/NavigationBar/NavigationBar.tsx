@@ -81,7 +81,7 @@ const Container = styled(Stack)<SheetProps & StackProps>(({ theme }) => ({
   bottom: 0,
   position: 'sticky',
   backdropFilter: 'blur(7px)',
-  backgroundColor: theme.palette.mode === 'light' ? 'hsla(0 0% 100% / 0.8)' : 'hsl(211deg 20% 10% / 70%)',
+  backgroundColor: theme.vars.palette.background.navigationBar,
   borderLeft: 'none',
   '@media (max-width: 1023px)': {
     borderBottom: 'none',

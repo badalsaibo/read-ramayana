@@ -13,7 +13,7 @@ export default Commentary;
 
 const Wrapper = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
-  backgroundColor: theme.palette.mode === 'light' ? 'hsl(215deg 50% 79% / 40%)' : 'hsl(247deg 31% 46% / 40%)',
+  backgroundColor: theme.vars.palette.custom.commentaryBg,
   borderRadius: theme.spacing(1),
   '& p': {
     marginTop: 0,

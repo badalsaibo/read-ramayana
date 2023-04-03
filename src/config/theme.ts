@@ -1,6 +1,21 @@
 import { CssVarsThemeOptions, extendTheme } from '@mui/joy/styles';
 import { body, display } from './font';
 
+declare module '@mui/joy/styles' {
+  interface Palette {
+    background: {
+      navigationBar: string;
+    };
+    custom: {
+      paddedButton: string;
+      paddedButtonIcon: string;
+      commentaryBg: string;
+    };
+  }
+}
+
+const theme = extendTheme();
+
 const themeConfig: CssVarsThemeOptions = {
   fontFamily: {
     body: `${body.style.fontFamily}, var(--joy-fontFamily-fallback)`,
@@ -42,6 +57,14 @@ const themeConfig: CssVarsThemeOptions = {
           800: '#102693',
           900: '#0c1b6a',
         },
+        background: {
+          navigationBar: 'hsla(0 0% 100% / 0.8)',
+        },
+        custom: {
+          paddedButton: 'var(--joy-palette-primary-600)',
+          paddedButtonIcon: theme.palette.info[300],
+          commentaryBg: 'hsl(215deg 50% 79% / 40%)',
+        },
       },
     },
     dark: {
@@ -61,6 +84,14 @@ const themeConfig: CssVarsThemeOptions = {
           outlinedBorder: 'rgba(var(--joy-palette-primary-darkChannel) / 0.3)',
           outlinedActiveBg: 'rgba(var(--joy-palette-primary-darkChannel) / 0.2)',
           outlinedHoverBg: 'rgba(var(--joy-palette-primary-darkChannel) / 0.3)',
+        },
+        background: {
+          navigationBar: 'hsl(211deg 20% 10% / 70%)',
+        },
+        custom: {
+          paddedButton: 'var(--joy-palette-primary-600)',
+          paddedButtonIcon: 'currentColor',
+          commentaryBg: 'hsl(247deg 31% 46% / 40%)',
         },
       },
     },
