@@ -4,7 +4,7 @@ const GenericHead = ({ title, description }: { title: string; description: strin
   return (
     <Head>
       <title>{title}</title>
-      <meta name="title" content={title} />
+      <meta name="title" content="Read Valimiki Ramayana online" />
       <meta name="description" content={description} />
       <meta
         name="keywords"
