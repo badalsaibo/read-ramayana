@@ -6,19 +6,35 @@ import IconButton from '@mui/joy/IconButton';
 import type { StackProps } from '@mui/system';
 import { styled, SheetProps } from '@mui/joy';
 
-import { FiBook } from 'react-icons/fi';
 import { useRouter } from 'next/router';
 import { TbLayoutGrid } from 'react-icons/tb';
 import { IoChevronBack } from 'react-icons/io5';
 import { CgPlayTrackPrevR, CgPlayTrackNextR } from 'react-icons/cg';
 import { KANDAS, KANDA_CHAPTER_LENGTH } from 'constant/kanda';
 import { TKanda } from 'interface/kanda';
+import { IoShareSocial } from 'react-icons/io5';
+import { TiHome } from 'react-icons/ti';
+import { useNotify } from 'provider/NotifyProvider';
 
 const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
   const router = useRouter();
+  const { notify } = useNotify();
 
   const handleBackClick = () => {
     router.back();
+  };
+
+  const handleShareCopyUrl = () => {
+    console.log('hell', router.asPath, router.basePath);
+    navigator.clipboard
+      .writeText(window.location.href)
+      .then(() => {
+        notify({
+          text: 'Copied url!',
+          timeout: 1000,
+        });
+      })
+      .catch((err) => console.error(err));
   };
 
   const linkPath = router.asPath.split('/');
@@ -53,7 +69,7 @@ const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
         <IoChevronBack size={24} />
       </IconButton>
 
-      {isSarga && (
+      {isSarga ? (
         <>
           <IconButton variant="outlined" component={Link} href={prevHref}>
             <CgPlayTrackPrevR size={24} />
@@ -66,12 +82,16 @@ const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
           <IconButton variant="outlined" component={Link} href={nextHref}>
             <CgPlayTrackNextR size={24} />
           </IconButton>
-        </>
-      )}
 
-      <IconButton variant="outlined" component={Link} href="/kanda">
-        <FiBook size={24} />
-      </IconButton>
+          <IconButton variant="outlined" onClick={handleShareCopyUrl}>
+            <IoShareSocial size={24} />
+          </IconButton>
+        </>
+      ) : (
+        <IconButton variant="outlined" component={Link} href="/">
+          <TiHome size={24} />
+        </IconButton>
+      )}
     </Container>
   );
 };

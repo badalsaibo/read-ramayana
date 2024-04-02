@@ -21,10 +21,12 @@ const Kanda = () => {
         </Stack>
         <Divider sx={{ mb: 1 }} />
 
-        <Typography level="body1">
-          In Sanskrit, &quot;kanda&quot; (कण्ड) generally denotes a section or part of something, often used to describe
-          a division or chapter in a text.
-        </Typography>
+        <Box>
+          <Typography level="body1">
+            In Sanskrit, &quot;kanda&quot; (कण्ड) generally denotes a section or part of something, often used to
+            describe a division or chapter in a text.
+          </Typography>
+        </Box>
         <Box sx={{ my: 'auto' }}>
           <Grid container spacing={2}>
             {KANDAS.map(({ kanda, url }) => (
