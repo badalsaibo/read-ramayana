@@ -25,7 +25,6 @@ const NavigationBar = ({ isSarga = false }: { isSarga?: boolean }) => {
   };
 
   const handleShareCopyUrl = () => {
-    console.log('hell', router.asPath, router.basePath);
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => {
