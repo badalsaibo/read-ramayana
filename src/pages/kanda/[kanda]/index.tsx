@@ -40,23 +40,9 @@ const Kanda = ({ chapters, kanda }: TKandaProps) => {
           <DarkModeButton />
         </Stack>
         <Typography level="h1" sx={{ textTransform: 'capitalize' }}>
-          {kanda}
+          {kanda} Kanda
         </Typography>
         <Divider />
-        <Stack>
-          <Grid container spacing={1}>
-            {chapters.map(({ id, sarga }) => (
-              <Grid xs={2} key={id}>
-                <Button variant="soft" fullWidth component={Link} href={`/kanda/${kanda}/${sarga}`}>
-                  {sarga}
-                </Button>
-              </Grid>
-            ))}
-          </Grid>
-        </Stack>
-
-        <Divider />
-
         <Stack spacing={1} sx={{ mt: 1 }}>
           <Grid container rowSpacing={2} columnSpacing={1}>
             {chapters.map(({ id, title, sarga }) => (
@@ -76,6 +62,20 @@ const Kanda = ({ chapters, kanda }: TKandaProps) => {
                 >
                   {sarga}.&nbsp;{title}
                 </Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </Stack>
+
+        <Divider />
+
+        <Stack>
+          <Grid container spacing={1}>
+            {chapters.map(({ id, sarga }) => (
+              <Grid xs={2} key={id}>
+                <Button variant="soft" fullWidth component={Link} href={`/kanda/${kanda}/${sarga}`}>
+                  {sarga}
+                </Button>
               </Grid>
             ))}
           </Grid>
