@@ -1,1 +1,1 @@
-export const PAGE_TITLE = 'Valmiki Ramayana';
+export const PAGE_TITLE = 'Read Ramayana';

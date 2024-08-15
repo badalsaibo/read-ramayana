@@ -4,7 +4,7 @@ import Box from '@mui/joy/Box';
 import Stack from '@mui/joy/Stack';
 import Button from '@mui/joy/Button';
 import Typography from '@mui/joy/Typography';
-import { styled, useTheme } from '@mui/joy/styles';
+import { styled } from '@mui/joy/styles';
 
 import { PAGE_TITLE } from 'constant';
 import { CgTrees } from 'react-icons/cg';
