@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/next';
 
 import CssBaseline from '@mui/joy/CssBaseline';
 import GlobalStyles from '@mui/joy/GlobalStyles';
@@ -40,6 +41,7 @@ export default function App({ Component, pageProps }: CustomAppProps) {
           <CssBaseline />
           {globalStyles}
           <Component {...pageProps} />
+          <Analytics />
         </Layout>
       </NotifyProvider>
     </CssVarsProvider>
