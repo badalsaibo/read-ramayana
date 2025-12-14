@@ -4,7 +4,7 @@ import path from 'path';
 import { SITE_URL } from 'constant';
 import { KANDAS, KANDA_CHAPTER_LENGTH } from 'constant/kanda';
 
-const DEFAULT_LASTMOD = "2025-12-14T08:42:12.972Z"
+const DEFAULT_LASTMOD = "2018-10-20"
 
 const Sitemap = () => {
     return null;
@@ -13,7 +13,7 @@ const Sitemap = () => {
 const getLastMod = (filePath: string) => {
     try {
         const stats = fs.statSync(filePath);
-        return stats.mtime.toISOString();
+        return stats.mtime.toISOString().split('T')[0];
     } catch (e) {
         return DEFAULT_LASTMOD;
     }
