@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head';
 
 import Box from '@mui/joy/Box';
 import Stack from '@mui/joy/Stack';
@@ -6,7 +7,7 @@ import Button from '@mui/joy/Button';
 import Typography from '@mui/joy/Typography';
 import { styled } from '@mui/joy/styles';
 
-import { PAGE_TITLE } from 'constant';
+import { PAGE_TITLE, SITE_URL } from 'constant';
 import { CgTrees } from 'react-icons/cg';
 import { GoChevronRight } from 'react-icons/go';
 import { GiMonsteraLeaf } from 'react-icons/gi';
@@ -18,6 +19,21 @@ export default function Home() {
   return (
     <>
       <GenericHead title={PAGE_TITLE} description="Read Valimiki Ramayana online" />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: PAGE_TITLE,
+              alternateName: 'Ramayana',
+              url: SITE_URL,
+              inLanguage: 'en'
+            }),
+          }}
+        />
+      </Head>
       <Container>
         <Stack justifyContent="center" alignItems="center" flex="1" gap={3}>
           <Typography level="h2" component="h1" textAlign="center" fontSize="1.75rem">
