@@ -56,13 +56,13 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     const allPages = [
         {
             url: `${SITE_URL}`,
-            lastmod: new Date().toISOString(),
+            lastmod: DEFAULT_LASTMOD,
             changefreq: 'daily',
             priority: 1.0,
         },
         {
             url: `${SITE_URL}/kanda`,
-            lastmod: new Date().toISOString(),
+            lastmod: DEFAULT_LASTMOD,
             changefreq: 'weekly',
             priority: 0.9,
         },
