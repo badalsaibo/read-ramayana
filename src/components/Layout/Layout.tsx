@@ -18,7 +18,7 @@ type TLayoutProps = {
 const Container = styled(Stack)(({ theme }) => ({
   flexGrow: 1,
   height: '100%',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
   display: 'grid',
   gridTemplateRows: '1fr min-content',
 }));

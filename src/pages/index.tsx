@@ -15,10 +15,11 @@ import { GiMonsteraLeaf } from 'react-icons/gi';
 import GenericHead from 'components/GenericHead';
 import DarkModeButton from 'components/DarkModeButton';
 
+
 export default function Home() {
   return (
     <>
-      <GenericHead title={PAGE_TITLE} description="Read Valimiki Ramayana online" />
+      <GenericHead title="Read Ramayana Online | Valmiki Ramayana" description="Read Valimiki Ramayana online" />
       <Head>
         <script
           type="application/ld+json"
@@ -36,8 +37,11 @@ export default function Home() {
       </Head>
       <Container>
         <Stack justifyContent="center" alignItems="center" flex="1" gap={3}>
-          <Typography level="h2" component="h1" textAlign="center" fontSize="1.75rem">
-            Immerse yourself in the timeless epic of Ramayana by reading it online
+          <Typography level="h1" component="h1" textAlign="center" fontSize="2rem">
+            Read Ramayana Online
+          </Typography>
+          <Typography level="body1" textAlign="center">
+            Immerse yourself in the timeless epic of Ramayana.
           </Typography>
           <Button endDecorator={<GoChevronRight size={20} />} size="lg" component={Link} href="/kanda">
             Start Reading
